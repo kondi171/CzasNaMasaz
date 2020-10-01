@@ -1,0 +1,31 @@
+nav.main-nav {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 8vh;
+    background-color: $darkColor;
+    opacity: .9;
+}
+
+nav.main-nav ul.nav-list {
+    display: none;
+    list-style: none;
+}
+
+.hamburger-btn {
+    font-size: 4vh;
+    position: absolute;
+    line-height: 8vh;
+    right: 5vw;
+    color: $greyColor;
+}
+
+nav.main-nav h1 {
+    margin-left: 3vw;
+    line-height: 48px;
+    color: lighten($greyColor, 10%);
+}
+
+nav.img-nav {
+    height: 100vh;
+}
