@@ -1,0 +1,32 @@
+section.articles {
+    width: 80%;
+    margin: $sectionSpace auto;
+    .img-cover {
+        background-color:black;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            box-shadow: 0 0 .8rem .1rem $skyBlue;
+            opacity: .6;
+        }
+    }
+    
+    h1 {
+        letter-spacing: 3px;
+        font-family: $mainFont;
+        font-weight: bold;
+        font-size: 2rem;
+        text-align: center;
+        padding: $sectionSpace;
+        border-bottom: 3px solid $darkColor;
+    }
+    p {
+        padding: $sectionSpace 0;
+        text-align: justify;
+        text-align-last: center;
+    }
+}
