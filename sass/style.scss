@@ -4,6 +4,9 @@
 @import '_nav.scss';
 @import '_articles.scss';
 @import '_about.scss';
+@import '_offer.scss';
+@import '_contact.scss';
+@import '_footer.scss';
 
 * {
     margin: 0;
@@ -14,6 +17,7 @@
 
 body {
     background-color: $bgColor;
+    overflow-x: hidden;
 }
 
 /*
