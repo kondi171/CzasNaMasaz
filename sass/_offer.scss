@@ -25,10 +25,10 @@ section.offer {
             line-height: 50%;
             margin-top: $sectionSpace;
             li {
-                transform: translateX(20%);
+               // transform: translateX(20%);
             }
             li:nth-of-type(2n) {
-                transform: translateX(-30%);
+               // transform: translateX(-30%);
             }
         }
     }

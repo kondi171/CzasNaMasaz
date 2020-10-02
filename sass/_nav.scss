@@ -5,11 +5,16 @@ nav.main-nav {
     height: 8vh;
     background-color: $darkColor;
     opacity: .9;
-}
-
-nav.main-nav ul.nav-list {
-    display: none;
-    list-style: none;
+    ul.nav-list {
+        display: none;
+        list-style: none;
+    }
+    h1 {
+        font-size: 4vh;
+        margin-left: 3vw;
+        line-height: 8vh;
+        color: lighten($greyColor, 10%);
+    }
 }
 
 .hamburger-btn {
@@ -20,12 +25,27 @@ nav.main-nav ul.nav-list {
     color: $greyColor;
 }
 
-nav.main-nav h1 {
-    margin-left: 3vw;
-    line-height: 48px;
-    color: lighten($greyColor, 10%);
-}
-
 nav.img-nav {
     height: 100vh;
+}
+
+@media (min-width: 1600px) {
+    nav.main-nav {
+        display: flex;
+        align-items: center;
+        ul.nav-list {
+            display: flex;
+            flex-basis: 80%;
+            justify-content: flex-end;
+            font-size: 3vh;
+            .item-list {
+                margin-left: 4vh;
+                width: 80% / 4;
+                color: $greyColor;
+            }
+        }
+    }
+    .hamburger-btn {
+        display: none;
+    }
 }

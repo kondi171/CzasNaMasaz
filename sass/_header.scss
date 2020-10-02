@@ -92,3 +92,10 @@ nav.img-nav {
 //     margin-right: 10vh;
 // }
 
+//Media Queries
+
+@media (min-width: 1600px){
+    header.main-header {
+        background-image: url(../img/desktop/wellness-285587_1920.jpg);
+    }
+}
