@@ -11,8 +11,7 @@ nav.main-nav {
     ul.nav-list {
         display: none;
         list-style: none;
-    }
-    h1 {
+    } h1 {
         font-size: 4vh;
         margin-left: 3vw;
         line-height: 8vh;
@@ -31,11 +30,10 @@ nav.main-nav {
     color: $greyColor;
 }
 
-nav.img-nav {
-    height: 100vh;
-}
+nav.img-nav { height: 100vh; }
+
 //***Media Queries***
-//***tv***
+
 @media (min-width: 1024px) {
     nav.main-nav {
         display: flex;
@@ -52,7 +50,5 @@ nav.img-nav {
             }
         }
     }
-    .hamburger-btn {
-        display: none;
-    }
+    .hamburger-btn { display: none; }
 }

@@ -13,8 +13,7 @@ section.contact {
             color: $bgColor;
             text-shadow: 1px 1px 1px $darkColor;
         }
-    }
-    ul {
+    } ul {
         width: 70%;
         text-align: center;
         margin: 0 auto;
@@ -23,10 +22,7 @@ section.contact {
         li {
             display: flex;
             justify-content:space-between;
-            span:nth-of-type(even) {
-                color: $casualBlue;
-            }
+            span:nth-of-type(even) { color: $casualBlue; }
         }
-
     }
 }

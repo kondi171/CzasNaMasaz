@@ -17,8 +17,7 @@ section.about {
             font-size: 2rem;
             content: '-';
         }
-    }
-    
+    }   
     p.about-me {
         width: 80%;
         padding: 2vh 0;
@@ -27,6 +26,8 @@ section.about {
         text-align-last: center;
     }
 }
+
+//***Media Queries***
 
 @media (min-width: 1024px){
     section.about {
@@ -39,8 +40,7 @@ section.about {
             flex-basis: 30%;
             width: 70vh;
             height: 70vh;
-        }
-        div {
+        } div {
             flex-basis: 70%;
         }
         h1.author-name {

@@ -9,18 +9,16 @@ section.offer {
         padding: $sectionSpace/2 0;
         border-bottom: 3px solid $darkColor;
         text-transform: uppercase;
-        &::first-letter{
+        &::first-letter {
             color: $bgColor;
             text-shadow: 1px 1px 1px $darkColor;
         }
-    }
-    div {
+    } div {
         text-align: center;
         .price-list {
             margin-top: $sectionSpace/2;
             width: 100%;
-        }
-        .main-offer {
+        } .main-offer {
             h3 {
                 margin-bottom: $sectionSpace/2;
                 color: $bgColor;
@@ -45,12 +43,14 @@ section.offer {
             padding: .5rem .7rem;
             text-align: justify;
             text-align-last: center;
-            &:last-child{
+            &:last-child {
                 padding-bottom: .2rem;
             }
         }
     }
 }
+
+//***Media Queries***
 
 @media (min-width: 1024px) {
     section.offer {
