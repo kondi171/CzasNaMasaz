@@ -13,11 +13,19 @@ section.offer {
             color: $bgColor;
             text-shadow: 1px 1px 1px $darkColor;
         }
-    } div {
+    } .offer-wrapper {
         text-align: center;
         .price-list {
-            margin-top: $sectionSpace/2;
+            margin: $sectionSpace/2 0;
             width: 100%;
+            h2 {
+                width: 100%;
+                text-shadow: 1px 1px 1px $bgColor;
+                
+            } h3 {
+                font-size: 4rem;
+                width: 100%;
+            }
         } .main-offer {
             h3 {
                 margin-bottom: $sectionSpace/2;
@@ -34,6 +42,9 @@ section.offer {
                 }
                 li:nth-of-type(odd){
                     text-shadow: 1px 1px 1px white;
+                }
+                li:last-of-type {
+                    margin-bottom: 1.5vh;
                 }
             }
         }
@@ -55,27 +66,28 @@ section.offer {
 @media (min-width: 1024px) {
     section.offer {
         h1 {
-            text-align: center;
-            font-family: $mainFont;
-            font-weight: bold;
-            font-size: 48px;
+            font-size: 4rem;
             border-bottom: 3px solid $darkColor;
-        }
-        div {
+        } .offer-wrapper {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            border-bottom: .4vh solid $darkColor;
             .price-list {
-                width: 70%;
-                order: 2;
-            }
-            .main-offer {
-                width:30%;
-                order: 1;
-                h3 {
-                    margin-bottom: $sectionSpace;
+                border-left: 1vh dotted $darkColor;
+                width: 50%;
+                h2 {
+                    font-size: 5rem;
+                    margin-bottom: 2rem;
                 }
                 
+            }
+            .main-offer {
+                width:50%;
+                h3 {
+                    font-size: 3rem;
+                    margin-bottom: $sectionSpace;
+                }
             }
         }
 
