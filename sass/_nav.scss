@@ -47,6 +47,12 @@ nav.img-nav { height: 100vh; }
                 margin-left: 4vh;
                 width: 80% / 4;
                 color: $greyColor;
+                transition: .3s;
+                &:hover {
+                    cursor: pointer;
+                    color: $casualBlue;
+                    transform: scale(1.1) rotate(2deg);
+                }
             }
         }
     }

@@ -20,29 +20,11 @@ header.main-header {
         top: 20vh;
         text-align:center;
         opacity: .9;
-        border-radius: 2vh;
-        border-bottom: 4px solid $darkColor;
         text-shadow: 1vh -1vh 1vh $bgColor,
                     -1vh 1vh 1vh $bgColor,
                      1vh 1vh 1vh $bgColor,
                     -1vh -1vh 1vh $bgColor;
-    } h3 {
-        position: absolute;
-        width: 80%;
-        left: 10%;
-        right: 10%;
-        top: 50vh;
-        text-align: center;
-        color: $bgColor;
-        line-height: 250%;
-        span {
-            width: 80%;
-            margin: 0 auto;
-            opacity: .9;
-            border-radius: .4vh;
-            padding: .4vh;
-            background-color: $darkColor;
-        }
+        animation: mainLogo 3s linear infinite;
     }
 }
 
@@ -59,11 +41,23 @@ nav.img-nav {
 .fa-angle-left {
     position: absolute;
     left: 1vh;
+    animation: leftAngle 1s linear infinite;
+    &:hover {
+        cursor: pointer;
+        animation: none;
+        transform: scale(1.2);
+    }
 }
 
 .fa-angle-right {
     position: absolute;
     right: 1vh;
+    animation: rightAngle 1s linear infinite;
+    &:hover {
+        cursor: pointer;
+        animation: none;
+        transform: scale(1.2);
+    }
 }
 
 .dot {
@@ -77,12 +71,47 @@ nav.img-nav {
     border-radius: 50%;
 }
 
+@keyframes mainLogo {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes leftAngle {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes rightAngle {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
 
 //***Media Queries***
 
 @media (min-width: 1024px){
     header.main-header {
-        background-image: url(../img/desktop/wellness-285587_1920.jpg);
+        background-image: url(../img/desktop/lemon-906141_1920.jpg);
         h1 {
             font-size: 12vh;
         }
