@@ -2,5 +2,31 @@ section.contact {
     background-color: $greyColor;
     h1 {
         text-align: center;
+        letter-spacing: .4vh;
+        font-family: $mainFont;
+        font-weight: bold;
+        font-size: 3rem;
+        padding: $sectionSpace/2 0;
+        border-bottom: 3px solid $casualBlue;
+        text-transform: uppercase;
+        &::first-letter {
+            color: $bgColor;
+            text-shadow: 1px 1px 1px $darkColor;
+        }
+    }
+    ul {
+        width: 70%;
+        text-align: center;
+        margin: 0 auto;
+        padding: 2vh;
+        font-size: 1.4rem;
+        li {
+            display: flex;
+            justify-content:space-between;
+            span:nth-of-type(even) {
+                color: $casualBlue;
+            }
+        }
+
     }
 }

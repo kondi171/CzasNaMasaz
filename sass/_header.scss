@@ -13,7 +13,7 @@ header.main-header {
         position: absolute;
         font-family: $mainFont;
         font-weight: bold;
-        font-size: 7vh;
+        font-size: 5vh;
         color: lighten($darkColor, 10%);
         padding: 1vw 2vw;
         letter-spacing: 5px;
@@ -23,13 +23,14 @@ header.main-header {
         top: 20vh;
         text-align:center;
         opacity: .9;
+        border-radius: 2vh;
+            border-bottom: 4px solid $darkColor;
+            text-shadow: 1vh -1vh 1vh $bgColor,
+                         -1vh 1vh 1vh $bgColor,
+                         1vh 1vh 1vh $bgColor,
+                         -1vh -1vh 1vh $bgColor;
         //border-bottom: 4px solid $darkColor;
-        border-top: 4px solid $darkColor;
-        border-radius: 50%;
     }
-}
-
-header.main-header {
     h3 {
         position: absolute;
         width: 80%;
@@ -94,8 +95,11 @@ nav.img-nav {
 
 //Media Queries
 
-@media (min-width: 1600px){
+@media (min-width: 1024px){
     header.main-header {
         background-image: url(../img/desktop/wellness-285587_1920.jpg);
+        h1 {
+            font-size: 12vh;
+        }
     }
 }

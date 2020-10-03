@@ -5,6 +5,9 @@ nav.main-nav {
     height: 8vh;
     background-color: $darkColor;
     opacity: .9;
+    z-index: 10;
+    border-bottom: .2vh solid $casualBlue;
+    box-shadow: 0 0 .8vh .2vh $casualBlue;
     ul.nav-list {
         display: none;
         list-style: none;
@@ -14,6 +17,9 @@ nav.main-nav {
         margin-left: 3vw;
         line-height: 8vh;
         color: lighten($greyColor, 10%);
+        span {
+            color: $casualBlue;
+        }
     }
 }
 
@@ -28,8 +34,9 @@ nav.main-nav {
 nav.img-nav {
     height: 100vh;
 }
-
-@media (min-width: 1600px) {
+//***Media Queries***
+//***tv***
+@media (min-width: 1024px) {
     nav.main-nav {
         display: flex;
         align-items: center;
