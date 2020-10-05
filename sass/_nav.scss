@@ -34,15 +34,29 @@ nav.img-nav { height: 100vh; }
 
 //***Media Queries***
 
-@media (min-width: 1024px) {
+@media (min-width: 540px) and (orientation: landscape) {
+    nav.main-nav {
+        height: 12vh;
+        h1 {
+            font-size: 6vh;
+            line-height: 12vh;
+        } 
+    }
+    .hamburger-btn {
+        font-size: 6vh;
+        line-height: 12vh;
+    }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
     nav.main-nav {
         display: flex;
         align-items: center;
         ul.nav-list {
             display: flex;
-            flex-basis: 80%;
+            flex-basis: 70%;
             justify-content: flex-end;
-            font-size: 3vh;
+            font-size: 1.6rem;
             .item-list {
                 margin-left: 4vh;
                 width: 80% / 4;

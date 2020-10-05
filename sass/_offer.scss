@@ -16,14 +16,14 @@ section.offer {
     } .offer-wrapper {
         text-align: center;
         .price-list {
-            margin: $sectionSpace/2 0;
+            padding: $sectionSpace/2 0;
             width: 100%;
             h2 {
                 width: 100%;
                 text-shadow: 1px 1px 1px $bgColor;
                 
             } h3 {
-                font-size: 4rem;
+                font-size: 2rem;
                 width: 100%;
             }
             .bonus-paragraph {
@@ -58,6 +58,30 @@ section.offer {
 }
 
 //***Media Queries***
+@media (min-width: 540px) {
+    section.offer {
+        h1 {
+            font-size: 10vh;
+        }
+        .offer-wrapper {
+            .price-list {
+                h2 {
+                font-size: 10vh;
+                }
+            }
+            .main-offer ul {
+                font-size: 8vh;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                padding: 3vh;
+                li {
+                    flex-basis: 50%;
+                }
+            }
+        }
+    }
+}
 
 @media (min-width: 1024px) {
     section.offer {

@@ -1,7 +1,9 @@
 header.main-header {
-    background-image: url(../img/mobile/wellness-285587_640.jpg);
+    background-image: url(../img/mobile/lemon-906141_640.jpg);
     background-position: 50% 50%;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-color: $darkColor;
     height: 100vh;
     position: relative;
@@ -10,7 +12,7 @@ header.main-header {
         position: absolute;
         font-family: $mainFont;
         font-weight: bold;
-        font-size: 5vh;
+        font-size: 4.5rem;
         color: lighten($darkColor, 10%);
         padding: 1vw 2vw;
         letter-spacing: 5px;
@@ -109,9 +111,17 @@ nav.img-nav {
 
 //***Media Queries***
 
-@media (min-width: 1024px){
+@media (min-width: 900px) and (orientation: landscape){
     header.main-header {
         background-image: url(../img/desktop/lemon-906141_1920.jpg);
+        h1 {
+            font-size: 6rem;
+        }
+    }
+}
+
+@media (min-width: 1024px){
+    header.main-header {
         h1 {
             font-size: 8rem;
         }

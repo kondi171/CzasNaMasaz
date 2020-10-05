@@ -31,25 +31,13 @@ section.contact {
             font-size: 6rem;
         }
         .facebook {
-            transition: .4s;
-            &:hover {
-                cursor:pointer;
-                color: darken($casualBlue,20%);
-            }
+            color: rgb(0, 86, 247);
         }
         .mail {
-            transition: .4s;
-            &:hover {
-                cursor:pointer;
-                color: rgb(245, 63, 18);
-            }
+            color: rgb(245, 63, 18);
         }
         .phone {
-            transition: .4s;
-            &:hover {
-                cursor:pointer;
-                color: rgb(48, 131, 0);
-            }
+            color: rgb(48, 131, 0);
         }
     }   
 }
