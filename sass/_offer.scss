@@ -26,6 +26,11 @@ section.offer {
                 font-size: 4rem;
                 width: 100%;
             }
+            .bonus-paragraph {
+                .bonus-text {
+                    padding: .7rem 0;
+                }
+            }
         } .main-offer {
             h3 {
                 margin-bottom: $sectionSpace/2;
@@ -49,16 +54,7 @@ section.offer {
             }
         }
     }
-    .bonus-paragraph {
-        div {
-            padding: .5rem .7rem;
-            text-align: justify;
-            text-align-last: center;
-            &:last-child {
-                padding-bottom: .2rem;
-            }
-        }
-    }
+    
 }
 
 //***Media Queries***
@@ -80,7 +76,6 @@ section.offer {
                     font-size: 5rem;
                     margin-bottom: 2rem;
                 }
-                
             }
             .main-offer {
                 width:50%;

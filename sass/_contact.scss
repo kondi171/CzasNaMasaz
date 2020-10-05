@@ -13,16 +13,54 @@ section.contact {
             color: $bgColor;
             text-shadow: 1px 1px 1px $darkColor;
         }
-    } ul {
-        width: 70%;
+    }
+    .media-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
         text-align: center;
-        margin: 0 auto;
-        padding: 2vh;
-        font-size: 1.4rem;
-        li {
-            display: flex;
-            justify-content:space-between;
-            span:nth-of-type(even) { color: $casualBlue; }
+        .social-media {
+            flex-basis: 100%;
+        
         }
+        .media-text {
+           margin-bottom: $sectionSpace;
+        }
+        .media-font {
+            font-size: 6rem;
+        }
+        .facebook {
+            transition: .4s;
+            &:hover {
+                cursor:pointer;
+                color: darken($casualBlue,20%);
+            }
+        }
+        .mail {
+            transition: .4s;
+            &:hover {
+                cursor:pointer;
+                color: rgb(245, 63, 18);
+            }
+        }
+        .phone {
+            transition: .4s;
+            &:hover {
+                cursor:pointer;
+                color: rgb(48, 131, 0);
+            }
+        }
+    }   
+}
+
+@media (min-width: 1024px) {
+    section.contact {
+        .media-wrapper {
+            flex-wrap: nowrap;
+            .social-media {
+                flex-basis: 100% / 3;
+            }
+        } 
     }
 }
