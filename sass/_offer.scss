@@ -100,6 +100,12 @@ section.offer {
                     font-size: 5rem;
                     margin-bottom: 2rem;
                 }
+                .bonus-paragraph {
+                    margin-top: $sectionSpace * 2;
+                    .bonus-text {
+                        font-size: 1.2rem;
+                    }
+                }
             }
             .main-offer {
                 width:50%;
@@ -107,6 +113,7 @@ section.offer {
                     font-size: 3rem;
                     margin-bottom: $sectionSpace;
                 }
+                
             }
         }
 

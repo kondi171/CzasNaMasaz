@@ -76,10 +76,9 @@ section.articles {
             margin-bottom: $sectionSpace;
         }
         .img-cover {
-            flex-basis: 40%;
-            .img-content {
-                width: 100%;
-            }
+            width: 70vh;
+            height: 70vh;
+            
             .first-article-img {
                 background-image: url(../img/desktop/physiotherapy-567021_1920.jpg);
             }
@@ -92,14 +91,14 @@ section.articles {
             .fourth-article-img {
                 background-image: url(../img/desktop/massage-2768833_1920.jpg);
             }
-            .article-content {
-                flex-basis: 60%;
-                margin-left: $sectionSpace;
-                h1 {
-                    font-size: 4rem;
-                } p {
-                    font-size: 1.3rem;
-                }
+        }
+        .article-content {
+            flex-basis: 70%;
+            margin-left: $sectionSpace;
+            h1 {
+                font-size: 4rem;
+            } p {
+                font-size: 1.3rem;
             }
         }
     }
