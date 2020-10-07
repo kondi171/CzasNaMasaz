@@ -25,16 +25,16 @@ nav.main-nav {
 }
  ul.nav-list.dropdown {
      position: fixed;
-     top: 8vh;
+     top: 3rem;
      display: flex;
      width: 100%;
      flex-direction: column;
      align-items: center;
      justify-content: center;
      color: $bgColor;
-     font-size: 2rem;
+     font-size: 1.5rem;
      li {
-         padding: 1rem;
+         padding: .7rem;
      }
  }
  .curtain {
@@ -56,21 +56,20 @@ nav.main-nav {
     right: 5vw;
     margin: auto 0;
     .top-paddle, .middle-paddle, .bottom-paddle {
-        width: 6vh;
-        height: 2vh;
+        width: 2.5rem;
+        height: .5rem;
         background-color: $greyColor;
-        border-radius: 1vh;
-        border: .7vh solid $darkColor;
-        //transition: .2s;
+        border-radius: 1rem;
+       // border: .2rem solid $darkColor;
     }
     .top-paddle {
         position: absolute;
-        top: -.4rem;
+        top: -.8rem;
         transition: .2s;
     }
     .bottom-paddle {
         position: absolute;
-        bottom: -.4rem;
+        bottom: -.8rem;
         transition: .2s;
     }
     &:hover .top-paddle,&:hover .middle-paddle,&:hover .bottom-paddle {
@@ -84,7 +83,7 @@ nav.main-nav {
         .top-paddle {
             transform: rotate(45deg);
             top: 0;
-            height: 1.3vh;
+            height: .5rem;
             border: none;
         }
         .middle-paddle {
@@ -92,8 +91,8 @@ nav.main-nav {
         }
         .bottom-paddle {
             transform: rotate(-45deg);
-            bottom: .2rem;
-            height: 1.3vh;
+            bottom: 0;
+            height: .5rem;
             border: none;
         }
     }

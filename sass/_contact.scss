@@ -22,24 +22,32 @@ section.contact {
         text-align: center;
         .social-media {
             flex-basis: 100%;
-        
         }
         .media-text {
-           margin-bottom: $sectionSpace;
+           font-size: 2rem;
+           color: $casualBlue;
+           &:last-child {
+               margin-bottom: $sectionSpace;
+           }
         }
         .media-font {
-            font-size: 6rem;
-        }
-        .facebook {
-            color: rgb(0, 86, 247);
-        }
-        .mail {
-            color: rgb(245, 63, 18);
-        }
-        .phone {
-            color: rgb(48, 131, 0);
+            font-size: 7rem;
+            color: $darkColor;
+            animation: socialMedia 2s infinite;   
         }
     }   
+}
+
+@keyframes socialMedia {
+    0% {
+        text-shadow: -.3rem -.3rem 0 $casualBlue;
+    }
+    50% {
+        text-shadow: -.1rem -.1rem 0 $casualBlue;
+    }
+    100% {
+        text-shadow: -.3rem -.3rem 0 $casualBlue;
+    }
 }
 
 @media (min-width: 1024px) {

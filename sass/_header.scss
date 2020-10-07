@@ -1,20 +1,20 @@
 header.main-header {
+    background-attachment: fixed;
     &.slide-1 {
         transition: .8s;
-        background-image: url(../img/desktop/lemon-906141_1920.jpg);
+        background-image: url(../img/mobile/lemon-906141_640.jpg);
     }
     &.slide-2 {
         transition: .8s;
-        background-image: url(../img/desktop/wellness-589774_1920.jpg);
+        background-image: url(../img/mobile/wellness-589774_640.jpg);
     }
     &.slide-3 {
         transition: .8s;
-        background-image: url(../img/desktop/spa-3184610_1920.jpg);
+        background-image: url(../img/mobile/spa-3184610_640.jpg);
     }
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-color: $darkColor;
     height: 100vh;
     position: relative;
@@ -74,7 +74,6 @@ nav.img-nav {
 }
 
 .dots {
-    
     position: absolute;
     bottom: .5vh;
     display: flex;
@@ -144,6 +143,16 @@ nav.img-nav {
 
 @media (min-width: 1024px){
     header.main-header {
+        &.slide-1 {
+            background-image: url(../img/desktop/lemon-906141_1920.jpg);
+        }
+        &.slide-2 {
+            background-image: url(../img/desktop/wellness-589774_1920.jpg);
+        }
+        &.slide-3 {
+            background-image: url(../img/desktop/spa-3184610_1920.jpg);
+        }
+        //background-attachment: fixed;
         h1 {
             font-size: 8rem;
         }
