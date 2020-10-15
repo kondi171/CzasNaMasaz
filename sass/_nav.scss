@@ -8,8 +8,8 @@ nav.main-nav {
     background-color: $darkColor;
     opacity: .9;
     z-index: 10;
-    border-bottom: .2vh solid $casualBlue;
-    box-shadow: 0 0 .8vh .2vh $casualBlue;
+    border-bottom: .2vh solid $primaryColor;
+    box-shadow: 0 0 .8vh .2vh $primaryColor;
     .nav-list {
         display: none;
         list-style: none;
@@ -19,7 +19,7 @@ nav.main-nav {
         line-height: 8vh;
         color: lighten($greyColor, 10%);
         span {
-            color: $casualBlue;
+            color: $primaryColor;
         }
     }
 }
@@ -56,8 +56,8 @@ nav.main-nav {
     right: 5vw;
     margin: auto 0;
     .top-paddle, .middle-paddle, .bottom-paddle {
-        width: 2.5rem;
-        height: .5rem;
+        width: 2rem;
+        height: .3rem;
         background-color: $greyColor;
         border-radius: 1rem;
        // border: .2rem solid $darkColor;
@@ -74,7 +74,7 @@ nav.main-nav {
     }
     &:hover .top-paddle,&:hover .middle-paddle,&:hover .bottom-paddle {
         cursor: pointer;
-        background-color: $casualBlue;
+        background-color: $primaryColor;
     }
     &:hover {
         cursor: pointer;
@@ -133,12 +133,12 @@ nav.img-nav { height: 100vh; }
                 // &:nth-child(2)::before, &:nth-child(2)::after {
                 //     content: '';
                 //     display: block;
-                //     border: 1px solid $casualBlue;
+                //     border: 1px solid $primaryColor;
                 //     border-radius: 50%;
                 // }
                 &:hover {
                     cursor: pointer;
-                    color: $casualBlue;
+                    color: $primaryColor;
                     transform: scale(1.1) rotate(2deg);
                 }
             }

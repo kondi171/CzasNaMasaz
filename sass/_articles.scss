@@ -13,7 +13,7 @@ section.articles {
             width: 100%;
             height: 100%;  
             border-radius: 50%;
-            box-shadow: .5rem .5rem .8rem .1rem $casualBlue;
+            box-shadow: .5rem .5rem .8rem .1rem $primaryColor;
             opacity: .6;
         }
         .first-article-img {
@@ -105,6 +105,6 @@ section.articles {
     section.articles article:nth-child(2n) .img-cover {
         order: 2;
         margin-left: $sectionSpace;
-        .img-content { box-shadow: .5rem .5rem .8rem .1rem $casualBlue; }
+        .img-content { box-shadow: .5rem .5rem .8rem .1rem $primaryColor; }
     }
 }

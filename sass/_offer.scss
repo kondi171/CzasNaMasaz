@@ -1,5 +1,5 @@
 section.offer {
-    background-color: $casualBlue;
+    background-color: $primaryColor;
     h1 {
         text-align: center;
         letter-spacing: .4vh;
@@ -13,47 +13,37 @@ section.offer {
             color: $bgColor;
             text-shadow: 1px 1px 1px $darkColor;
         }
-    } .offer-wrapper {
-        text-align: center;
-        .price-list {
-            padding: $sectionSpace/2 0;
-            width: 100%;
-            h2 {
-                width: 100%;
-                text-shadow: 1px 1px 1px $bgColor;
-                
-            } h3 {
-                font-size: 2rem;
-                width: 100%;
-            }
-            .bonus-paragraph {
-                .bonus-text {
-                    padding: .7rem 0;
-                }
-            }
-        } .main-offer {
-            h3 {
-                margin-bottom: $sectionSpace/2;
-                color: $bgColor;
-                text-shadow: 1px 1px 1px $darkColor;
-            }
-            ul {
-                font-size: 4vh;
-                list-style: none;
-                margin-top: $sectionSpace;
-                li:nth-of-type(even){
-                    text-shadow: 1px 1px 1px $darkColor;
-                    color: $bgColor;
-                }
-                li:nth-of-type(odd){
-                    text-shadow: 1px 1px 1px white;
-                }
-                li:last-of-type {
-                    margin-bottom: 1.5vh;
-                }
-            }
+    }
+    .main-offer {
+        padding: $sectionSpace/2;
+        .offer-title {
+            text-align: left;
+            text-shadow: 1px -1px 0 $bgColor,
+                         -1px 1px 0 $bgColor,
+                         1px 1px 0 $bgColor,
+                        -1px -1px 0 $bgColor;
+        }
+    
+        .main-btn{
+            width: 50%;
+            margin-right: 5%;
+            margin-bottom: 5%;
+        }
+        
+        &:nth-of-type(odd) {
+            background-color: lighten($primaryColor, 10%);
+        }
+        &:nth-last-of-type(2) {
+            border-bottom: 2px solid $darkColor;
         }
     }
+    .description {
+        width: 80%;
+        text-align: center;
+        padding: $sectionSpace 0;
+        margin: 0 10%;
+    }
+    
     
 }
 

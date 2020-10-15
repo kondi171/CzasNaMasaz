@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Oswald:wght@400;700&display=swap');
 @import '_variables.scss';
+@import '_mixins.scss';
 @import '_header.scss';
 @import '_nav.scss';
 @import '_articles.scss';
@@ -19,6 +20,10 @@ body {
     background-color: $bgColor;
     overflow-x: hidden;
 }
+
+.main-btn {
+    @include btnDesign;
+}
 // TODO list
 // - fix ham-btn middle paddle
 // - project pretty contact section
@@ -33,4 +38,5 @@ Obraz <a href="https://pixabay.com/pl/users/whitesession-4645995/?utm_source=lin
 Obraz <a href="https://pixabay.com/pl/users/nnoeki-609630/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=589774"> Nico H.</a> z <a href="https://pixabay.com/pl/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=589774"> Pixabay</a>
 Obraz <a href="https://pixabay.com/pl/users/kerdkanno-1334070/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=906141"> Seksak Kerdkanno</a> z <a href="https://pixabay.com/pl/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=906141"> Pixabay</a>
 Obraz <a href="https://pixabay.com/pl/users/socialbutterflymmg-5413276/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3184610"> Social Butterfly</a> z <a href="https://pixabay.com/pl/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3184610"> Pixabay</a>
+Obraz <a href="https://pixabay.com/pl/users/guvo59-9285194/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3715860"> Gundula Vogel</a> z <a href="https://pixabay.com/pl/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3715860"> Pixabay</a>
 */

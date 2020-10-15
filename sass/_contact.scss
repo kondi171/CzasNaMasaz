@@ -1,5 +1,9 @@
 section.contact {
     background-color: $greyColor;
+    background-image: url(../img/mobile/wellness-3715860_640.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
     h1 {
         text-align: center;
         letter-spacing: .4vh;
@@ -7,48 +11,69 @@ section.contact {
         font-weight: bold;
         font-size: 3rem;
         padding: $sectionSpace/2 0;
-        border-bottom: 3px solid $casualBlue;
+        border-bottom: 3px solid $primaryColor;
         text-transform: uppercase;
+        color: $bgColor;
         &::first-letter {
-            color: $bgColor;
+            color: $primaryColor;
             text-shadow: 1px 1px 1px $darkColor;
         }
     }
-    .media-wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+    form.overlay {
+        width: 80%;
+        margin: $sectionSpace auto 0 auto;
+        padding: $sectionSpace 0;
+        background-color: $primaryColor;
+        opacity: .9;
+        border-radius: 3px;
+        box-shadow: 1px 1px 10px 1px $darkColor;
+        h2 {
+            font-family: $mainFont;
+            text-align: center;
+            border-bottom: 2px solid $darkColor;
+            padding-bottom: 10px;
+        }
+        .label-span {
+            display: block;
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        input {
+            width: 70%;
+            display: block;
+            margin: 0 auto;
+            border-radius: 3px;
+            padding: 5px;
+            background-color: $bgColor;
+            border: 1px solid $primaryColor;
+            &::placeholder {
+                text-align: center;
+            }
+        }
+        .main-btn {
+            margin: $sectionSpace auto $sectionSpace/2 auto;
+        }
+        textarea {
+            display: block;
+            margin: 0 auto;
+            border-radius: 3px;
+            padding: 5px;
+            background-color: $bgColor;
+            border: 1px solid $primaryColor;
+            min-width: 90%;
+            max-width: 90%;
+            min-height: 40vh;
+            max-height: 40vh;
+        }
         .social-media {
-            flex-basis: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 10px;
         }
-        .media-text {
-           font-size: 2rem;
-           color: $casualBlue;
-           &:last-child {
-               margin-bottom: $sectionSpace;
-           }
-        }
-        .media-font {
-            font-size: 7rem;
-            color: $darkColor;
-            animation: socialMedia 2s infinite;   
-        }
-    }   
+    }
 }
 
-@keyframes socialMedia {
-    0% {
-        text-shadow: -.3rem -.3rem 0 $casualBlue;
-    }
-    50% {
-        text-shadow: -.1rem -.1rem 0 $casualBlue;
-    }
-    100% {
-        text-shadow: -.3rem -.3rem 0 $casualBlue;
-    }
-}
 
 @media (min-width: 1024px) {
     section.contact {
