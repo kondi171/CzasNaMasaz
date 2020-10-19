@@ -1,56 +1,61 @@
 section.articles {
-    width: 80%;
-    margin: $sectionSpace auto;
-    .img-cover {
-        background-color:black;
-        width: 70vw;
-        height: 70vw;
-        border-radius: 50%;
-        margin: 0 auto;
-        .img-content {
-            background-size: cover;
-            background-position: 50% 50%;
-            width: 100%;
-            height: 100%;  
+    article.single-article {
+        width: 80%;
+        margin: $sectionSpace auto;
+        .img-cover {
+            background-color:black;
+            width: 70vw;
+            height: 70vw;
             border-radius: 50%;
-            box-shadow: .5rem .5rem .8rem .1rem $primaryColor;
-            opacity: .6;
+            margin: 0 auto;
+            .img-content {
+                background-size: cover;
+                background-position: 50% 50%;
+                width: 100%;
+                height: 100%;  
+                border-radius: 50%;
+                box-shadow: .5rem .5rem .8rem .1rem $primaryColor;
+                opacity: .6;
+            }
+            .first-article-img {
+                background-image: url(../img/mobile/classic.jpg);
+            }
+            .second-article-img {
+                background-image: url(../img/mobile/relax.jpg);
+            }
+            .third-article-img {
+                background-image: url(../img/mobile/bubbles.jpg);
+            }
+            .fourth-article-img {
+                background-image: url(../img/mobile/rocks.jpg);
+            }
+            .fifth-article-img {
+                background-image: url(../img/mobile/adventages.jpg);
+            }
+        } h1 {
+            letter-spacing: 3px;
+            font-family: $mainFont;
+            font-weight: bold;
+            font-size: 1.7rem;
+            text-align: center;
+            padding: $sectionSpace;
+            border-bottom: 3px solid $darkColor;
+        } p {
+            padding: $sectionSpace 0;
+            text-align: justify;
+            text-align-last: center;
         }
-        .first-article-img {
-            background-image: url(../img/mobile/physiotherapy-567021_640.jpg);
-        }
-        .second-article-img {
-            background-image: url(../img/mobile/wellness-285587_640.jpg);
-        }
-        .third-article-img {
-            background-image: url(../img/mobile/wellness-285590_640.jpg);
-        }
-        .fourth-article-img {
-            background-image: url(../img/mobile/massage-2768833_640.jpg);
-        }
-    } h1 {
-        letter-spacing: 3px;
-        font-family: $mainFont;
-        font-weight: bold;
-        font-size: 1.7rem;
-        text-align: center;
-        padding: $sectionSpace;
-        border-bottom: 3px solid $darkColor;
-    } p {
-        padding: $sectionSpace 0;
-        text-align: justify;
-        text-align-last: center;
-    }
-    ul {
-        list-style: none;
-        li::before {
-            content: '';
-            display: inline-block;
-            margin-right: 1vh;
-            margin-bottom: .5vh;
-            background-color: $darkColor;
-            width: 1vh;
-            height: 1vh;
+        ul {
+            list-style: none;
+            li::before {
+                content: '';
+                display: inline-block;
+                margin-right: 1vh;
+                margin-bottom: .5vh;
+                background-color: $darkColor;
+                width: 1vh;
+                height: 1vh;
+            }
         }
     }
 }
@@ -58,6 +63,7 @@ section.articles {
 //***Media Queries***
 @media (min-width: 540px) and (orientation: landscape) {
     section.articles {
+        width: 100%;
         .img-cover {
             width: 50vw;
             height: 50vw;
@@ -68,43 +74,53 @@ section.articles {
     section.articles {
         margin-top: 0;
         margin-bottom: 0;
-        box-shadow:  25px 0px 25px -25px rgba(0,0,0,0.45), -25px 0px 25px -25px rgba(0,0,0,0.45);
-        padding: 6vh;
-        article {
+        padding: 3vh;
+        article.single-article {
             display: flex;
             align-items: center;
+            justify-content: space-evenly; 
             margin-bottom: $sectionSpace;
-        }
-        .img-cover {
-            width: 70vh;
-            height: 70vh;
-            
-            .first-article-img {
-                background-image: url(../img/desktop/physiotherapy-567021_1920.jpg);
+            transform: translateY(1000px);
+            &.scroll-top {
+                transform: translateY(0);
             }
-            .second-article-img {
-                background-image: url(../img/desktop/wellness-285587_1920.jpg);
+            .img-cover {
+                width: 30%;
+                height: 65vh;
+                margin-left: 10vh;
+                .img-content {
+                    height: 65vh;  
+                }
+                .first-article-img {
+                    background-image: url(../img/desktop/classic.jpg);
+                }
+                .second-article-img {
+                    background-image: url(../img/desktop/relax.jpg);
+                }
+                .third-article-img {
+                    background-image: url(../img/desktop/bubbles.jpg);
+                }
+                .fourth-article-img {
+                    background-image: url(../img/desktop/rocks.jpg);
+                }
+                .fifth-article-img {
+                    background-image: url(../img/desktop/adventages.jpg);
+                }
             }
-            .third-article-img {
-                background-image: url(../img/desktop/wellness-285590_1920.jpg);
-            }
-            .fourth-article-img {
-                background-image: url(../img/desktop/massage-2768833_1920.jpg);
-            }
-        }
-        .article-content {
-            flex-basis: 70%;
-            margin-left: $sectionSpace;
-            h1 {
-                font-size: 4rem;
-            } p {
-                font-size: 1.3rem;
+            .article-content {
+                flex-basis: 70%;
+                margin-left: $sectionSpace;
+                h1 {
+                    font-size: 2rem;
+                } p {
+                    font-size: 1.3rem;
+                }
             }
         }
     }
     section.articles article:nth-child(2n) .img-cover {
         order: 2;
-        margin-left: $sectionSpace;
+        margin-right: $sectionSpace;
         .img-content { box-shadow: .5rem .5rem .8rem .1rem $primaryColor; }
     }
 }

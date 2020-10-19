@@ -1,6 +1,6 @@
 section.contact {
     background-color: $greyColor;
-    background-image: url(../img/mobile/wellness-3715860_640.jpg);
+    background-image: url(../img/mobile/contact.jpg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -70,8 +70,11 @@ section.contact {
             display: flex;
             justify-content: space-evenly;
             padding-top: 10px;
-            color: $darkColor;
-            text-decoration:none;
+            i, span {
+                font-size: .8rem;
+                color: $darkColor;
+                text-decoration:none;
+            }
         }
     }
 }
@@ -79,6 +82,11 @@ section.contact {
 
 @media (min-width: 1024px) {
     section.contact {
+        background-image: url(../img/desktop/contact.jpg);
+        form.overlay {
+            width: 50%;
+            margin: $sectionSpace auto;
+        }
         .media-wrapper {
             flex-wrap: nowrap;
             .social-media {

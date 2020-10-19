@@ -7,13 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const contact = document.querySelector('.contact-item');
 
     const curtain = document.body;
-
     const yOffset = -(window.innerHeight / 10);
 
     const toggleMenu = () => {
-        burger.classList.toggle('active');
-        dropdown.classList.toggle('dropdown');
-        curtain.classList.toggle('curtain');
+        if (window.innerWidth <= 1024) {
+            burger.classList.toggle('active');
+            dropdown.classList.toggle('dropdown');
+            curtain.classList.toggle('curtain');
+        }
     }
 
     burger.addEventListener('click', () => {

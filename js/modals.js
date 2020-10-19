@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const relaxBtn = document.getElementById('relax');
     const bubblesBtn = document.getElementById('bubbles');
     const rocksBtn = document.getElementById('rocks');
-    const partlyBtn = document.getElementById('partly');
     const backBtn = document.getElementById('back');
     const faceBtn = document.getElementById('face');
     const othersTopBtn = document.getElementById('others-top');
     const othersBottomBtn = document.getElementById('others-bottom');
+    const legsBtn = document.getElementById('legs');
     const closeBtn = document.querySelectorAll('.close-btn');
 
     //Modal's
@@ -20,12 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const relaxModal = document.querySelector('.relax-modal');
     const bubblesModal = document.querySelector('.bubbles-modal');
     const rocksModal = document.querySelector('.rocks-modal');
-    const partlyModal = document.querySelector('.partly-modal');
     const backModal = document.querySelector('.back-modal');
     const faceModal = document.querySelector('.face-modal');
     const othersTopModal = document.querySelector('.others-top-modal');
     const othersBottomModal = document.querySelector('.others-bottom-modal');
-
+    const legsModal = document.querySelector('.legs-modal');
 
 
     const toogleModals = () => {
@@ -49,10 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
         toogleModals();
         rocksModal.classList.add('active');
     });
-    partlyBtn.addEventListener('click', () => {
-        toogleModals();
-        partlyModal.classList.add('active');
-    });
     backBtn.addEventListener('click', () => {
         toogleModals();
         backModal.classList.add('active');
@@ -69,6 +64,10 @@ document.addEventListener('DOMContentLoaded', () => {
         toogleModals();
         othersBottomModal.classList.add('active');
     });
+    legsBtn.addEventListener('click', () => {
+        toogleModals();
+        legsModal.classList.add('active');
+    });
 
 
 
@@ -79,11 +78,11 @@ document.addEventListener('DOMContentLoaded', () => {
             relaxModal.classList.remove('active');
             bubblesModal.classList.remove('active');
             rocksModal.classList.remove('active');
-            partlyModal.classList.remove('active');
             backModal.classList.remove('active');
             faceModal.classList.remove('active');
             othersTopModal.classList.remove('active');
             othersBottomModal.classList.remove('active');
+            legsModal.classList.remove('active');
         });
     });
 });

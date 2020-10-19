@@ -2,4 +2,21 @@ footer.footer {
     color: $greyColor;
     background-color: $darkColor;
     text-align: center;
+    .sources {
+        width:90%;
+        padding: .3rem;
+        margin: auto;
+        a {
+            text-decoration: none;
+            padding: .3rem;
+            color: $primaryColor;
+            &:visited {
+                color: $supportColor;
+            }
+        }
+    }
+    .author {
+        padding: .3rem 0;
+        background-color:#000;
+    }
 }
