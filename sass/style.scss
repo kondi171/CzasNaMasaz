@@ -19,8 +19,11 @@
 body {
     background-color: $bgColor;
     overflow-x: hidden;
+   // transition: 3s;
 }
-
+.curtain {
+   // transition: 3s;
+}
 .main-btn {
     @include btnDesign;
 }

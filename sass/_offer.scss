@@ -24,14 +24,18 @@ section.offer {
                         -1px -1px 0 $bgColor;
         }
     
-        .main-btn{
+        .main-btn {
             width: 50%;
             margin-right: 5%;
-            margin-bottom: 5%;
+            margin-bottom: 5%;   
         }
-        
         &:nth-of-type(odd) {
             background-color: lighten($primaryColor, 10%);
+            button.main-btn {
+                margin-right: 0;
+                margin-left: 5%;
+            }
+            
         }
         &:nth-last-of-type(2) {
             border-bottom: 2px solid $darkColor;
@@ -43,7 +47,52 @@ section.offer {
         padding: $sectionSpace 0;
         margin: 0 10%;
     }
-    
+    .modal {
+        display: none;
+        position: fixed;
+        top: 20%;
+        bottom: 20%;
+        left: 10%;
+        right: 10%;
+        width: 80%;
+        height: 60%;
+        border-radius: 5px;
+        background-color: $bgColor;
+        color: $darkColor;
+        z-index: 10;
+        transition: 3s;
+        box-shadow: .2rem .2rem .2rem 0 $supportColor;
+        h3 {
+            text-align: center;
+            padding: 1rem 0 1rem 1rem;
+            border-bottom: 3px solid $darkColor;
+
+        }
+        .info-wrapper {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .time-wrapper, .price-wrapper {
+            display: flex;
+            margin-bottom: 1rem;
+            .fa-clock-o, .fa-money {
+                display: block;
+                font-size: 1.3rem;
+                padding-left: .5rem;
+            }
+        }
+        .fa-times-circle {
+            position: absolute;
+            font-size: 2rem;
+            right: -1rem;
+            top: -1.3rem;
+            color: $greyColor;
+            padding-left: 1rem;
+        }
+    }
+    .active {
+        display: block;
+    }
     
 }
 

@@ -10,6 +10,7 @@ nav.main-nav {
     z-index: 10;
     border-bottom: .2vh solid $primaryColor;
     box-shadow: 0 0 .8vh .2vh $primaryColor;
+    transition: .3s;
     .nav-list {
         display: none;
         list-style: none;
@@ -22,6 +23,9 @@ nav.main-nav {
             color: $primaryColor;
         }
     }
+}
+nav.modal-active {
+    top: -8vh;
 }
  ul.nav-list.dropdown {
      position: fixed;
@@ -38,7 +42,6 @@ nav.main-nav {
      }
  }
  .curtain {
-     transition: .4s;
      &::before {
          content: '';
          position: fixed;

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.min.css">
     <script src="js/hamburger.js"></script>
     <script src="js/slider.js"></script>
+    <script src="js/modals.js"></script>
     <title>CzasNaMasaż.pl</title>
 </head>
 
@@ -33,10 +34,10 @@
             </div>
             <h1>Czas<span>Na</span>Masaż<span>.pl</span></h1>
             <ul class="nav-list">
-                <li class="item-list">Artykuły</li>
-                <li class="item-list">Oferta</li>
-                <li class="item-list">O mnie</li>
-                <li class="item-list">Kontakt</li>
+                <li class="item-list articles-item">Artykuły</li>
+                <li class="item-list about-item">O mnie</li>
+                <li class="item-list offer-item">Oferta</li>
+                <li class="item-list contact-item">Kontakt</li>
             </ul>
         </nav>
         <section class="articles">
@@ -96,7 +97,7 @@
                     <div class="img-content fourth-article-img"></div>
                 </div>
                 <div class="article-content">
-                    <h1>Zalety masażu (ogólne)</h1>
+                    <h1>Zalety masażu</h1>
                     <p>Jest ich naprawę sporo, zalety masażu nie kończą się na redukcji bólu i ogólnemu odprężeniu. Aby
                         osiągnąć długotrawałe i wyraźne efekty należy systematycznie oddawać się w ręce masażysty.
                         Korzyści których możemy się spodziewać to:
@@ -133,39 +134,264 @@
             <h1>Oferta</h1>
             <div class="main-offer">
                 <h2 class="offer-title">Masaż Klasyczny</h2>
-                <button class="main-btn">Pokaż</button>
+                <button id="classic" class="main-btn">Pokaż</button>
+                <div class="modal classic-modal">
+                    <h3>Masaż Klasyczny</h3>
+                    <div class="description">
+                        Do wykonania Masażu Klasycznego całego ciała wymagane jest minimum 120 minut.
+                    </div>
+                    <div class="info-wrapper">
+                        <div class="time">
+                            <div class="time-wrapper">
+                                <h4>Czas Trwania</h4>
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            </div>
+                            <div>60 minut</div>
+                            <div>120 minut</div>
+                        </div>
+                        <div class="price">
+                            <div class="price-wrapper">
+                                <h4>Cena</h4>
+                                <i class="fa fa-money" aria-hidden="true"></i>
+                            </div>
+                            <div>80 zł</div>
+                            <div>120 zł</div>
+                        </div>
+                    </div>
+                    <i class="fa fa-times-circle close-btn" aria-hidden="true"></i>
+                </div>
             </div>
             <div class="main-offer">
                 <h2 class="offer-title">Masaż Relaksacyjny</h2>
-                <button class="main-btn">Pokaż</button>
+                <button id="relax" class="main-btn">Pokaż</button>
+                <div class="modal relax-modal">
+                    <h3>Masaż Relaksacyjny</h3>
+                    <div class="description">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, ratione!
+                    </div>
+                    <div class="info-wrapper">
+                        <div class="time">
+                            <div class="time-wrapper">
+                                <h4>Czas Trwania</h4>
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            </div>
+                            <div>60 minut</div>
+                            <div>30 minut</div>
+                        </div>
+                        <div class="price">
+                            <div class="price-wrapper">
+                                <h4>Cena</h4>
+                                <i class="fa fa-money" aria-hidden="true"></i>
+                            </div>
+                            <div>80 zł</div>
+                            <div>40 zł</div>
+                        </div>
+                    </div>
+                    <i class="fa fa-times-circle close-btn" aria-hidden="true"></i>
+                </div>
             </div>
             <div class="main-offer">
                 <h2 class="offer-title">Masaż Bańkami</h2>
-                <button class="main-btn">Pokaż</button>
+                <button id="bubbles" class="main-btn">Pokaż</button>
+                <div class="modal bubbles-modal">
+                    <h3>Masaż Bańkami</h3>
+                    <div class="description">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, ratione!
+                    </div>
+                    <div class="info-wrapper">
+                        <div class="time">
+                            <div class="time-wrapper">
+                                <h4>Czas Trwania</h4>
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            </div>
+                            <div>60 minut</div>
+                            <div>30 minut</div>
+                        </div>
+                        <div class="price">
+                            <div class="price-wrapper">
+                                <h4>Cena</h4>
+                                <i class="fa fa-money" aria-hidden="true"></i>
+                            </div>
+                            <div>80 zł</div>
+                            <div>40 zł</div>
+                        </div>
+                    </div>
+                    <i class="fa fa-times-circle close-btn" aria-hidden="true"></i>
+                </div>
             </div>
             <div class="main-offer">
                 <h2 class="offer-title">Masaż Gorącymi Kamieniami</h2>
-                <button class="main-btn">Pokaż</button>
+                <button id="rocks" class="main-btn">Pokaż</button>
+                <div class="modal rocks-modal">
+                    <h3>Masaż Gorącymi Kamieniami</h3>
+                    <div class="description">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, ratione!
+                    </div>
+                    <div class="info-wrapper">
+                        <div class="time">
+                            <div class="time-wrapper">
+                                <h4>Czas Trwania</h4>
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            </div>
+                            <div>60 minut</div>
+                            <div>30 minut</div>
+                        </div>
+                        <div class="price">
+                            <div class="price-wrapper">
+                                <h4>Cena</h4>
+                                <i class="fa fa-money" aria-hidden="true"></i>
+                            </div>
+                            <div>80 zł</div>
+                            <div>40 zł</div>
+                        </div>
+                    </div>
+                    <i class="fa fa-times-circle close-btn" aria-hidden="true"></i>
+                </div>
             </div>
             <div class="main-offer">
                 <h2 class="offer-title">Masaże Częściowe</h2>
-                <button class="main-btn">Pokaż</button>
+                <button id="partly" class="main-btn">Pokaż</button>
+                <div class="modal partly-modal">
+                    <h3>Masaże Częściowe</h3>
+                    <div class="description">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, ratione!
+                    </div>
+                    <div class="info-wrapper">
+                        <div class="time">
+                            <div class="time-wrapper">
+                                <h4>Czas Trwania</h4>
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            </div>
+                            <div>60 minut</div>
+                            <div>30 minut</div>
+                        </div>
+                        <div class="price">
+                            <div class="price-wrapper">
+                                <h4>Cena</h4>
+                                <i class="fa fa-money" aria-hidden="true"></i>
+                            </div>
+                            <div>80 zł</div>
+                            <div>40 zł</div>
+                        </div>
+                    </div>
+                    <i class="fa fa-times-circle close-btn" aria-hidden="true"></i>
+                </div>
             </div>
             <div class="main-offer">
                 <h2 class="offer-title">Masaż Pleców Bańkami</h2>
-                <button class="main-btn">Pokaż</button>
+                <button id="back" class="main-btn">Pokaż</button>
+                <div class="modal back-modal">
+                    <h3>Masaż Pleców Bańkami</h3>
+                    <div class="description">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, ratione!
+                    </div>
+                    <div class="info-wrapper">
+                        <div class="time">
+                            <div class="time-wrapper">
+                                <h4>Czas Trwania</h4>
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            </div>
+                            <div>60 minut</div>
+                            <div>30 minut</div>
+                        </div>
+                        <div class="price">
+                            <div class="price-wrapper">
+                                <h4>Cena</h4>
+                                <i class="fa fa-money" aria-hidden="true"></i>
+                            </div>
+                            <div>80 zł</div>
+                            <div>40 zł</div>
+                        </div>
+                    </div>
+                    <i class="fa fa-times-circle close-btn" aria-hidden="true"></i>
+                </div>
             </div>
             <div class="main-offer">
                 <h2 class="offer-title">Masaż Twarzy</h2>
-                <button class="main-btn">Pokaż</button>
+                <button id="face" class="main-btn">Pokaż</button>
+                <div class="modal face-modal">
+                    <h3>Masaż Twarzy</h3>
+                    <div class="description">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, ratione!
+                    </div>
+                    <div class="info-wrapper">
+                        <div class="time">
+                            <div class="time-wrapper">
+                                <h4>Czas Trwania</h4>
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            </div>
+                            <div>60 minut</div>
+                            <div>30 minut</div>
+                        </div>
+                        <div class="price">
+                            <div class="price-wrapper">
+                                <h4>Cena</h4>
+                                <i class="fa fa-money" aria-hidden="true"></i>
+                            </div>
+                            <div>80 zł</div>
+                            <div>40 zł</div>
+                        </div>
+                    </div>
+                    <i class="fa fa-times-circle close-btn" aria-hidden="true"></i>
+                </div>
             </div>
             <div class="main-offer">
                 <h2 class="offer-title">Twarz, Szyja, Dekolt</h2>
-                <button class="main-btn">Pokaż</button>
+                <button id="others-top" class="main-btn">Pokaż</button>
+                <div class="modal others-top-modal">
+                    <h3>Twarz, Szyja, Dekolt</h3>
+                    <div class="description">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, ratione!
+                    </div>
+                    <div class="info-wrapper">
+                        <div class="time">
+                            <div class="time-wrapper">
+                                <h4>Czas Trwania</h4>
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            </div>
+                            <div>60 minut</div>
+                            <div>30 minut</div>
+                        </div>
+                        <div class="price">
+                            <div class="price-wrapper">
+                                <h4>Cena</h4>
+                                <i class="fa fa-money" aria-hidden="true"></i>
+                            </div>
+                            <div>80 zł</div>
+                            <div>40 zł</div>
+                        </div>
+                    </div>
+                    <i class="fa fa-times-circle close-btn" aria-hidden="true"></i>
+                </div>
             </div>
             <div class="main-offer">
                 <h2 class="offer-title">Barki, obręcz barkowa, miedzyłopatkowa</h2>
-                <button class="main-btn">Pokaż</button>
+                <button id="others-bottom" class="main-btn">Pokaż</button>
+                <div class="modal others-bottom-modal">
+                    <h3>Barki, obręcz barkowa, miedzyłopatkowa</h3>
+                    <div class="description">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, ratione!
+                    </div>
+                    <div class="info-wrapper">
+                        <div class="time">
+                            <div class="time-wrapper">
+                                <h4>Czas Trwania</h4>
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            </div>
+                            <div>60 minut</div>
+                            <div>30 minut</div>
+                        </div>
+                        <div class="price">
+                            <div class="price-wrapper">
+                                <h4>Cena</h4>
+                                <i class="fa fa-money" aria-hidden="true"></i>
+                            </div>
+                            <div>80 zł</div>
+                            <div>40 zł</div>
+                        </div>
+                    </div>
+                    <i class="fa fa-times-circle close-btn" aria-hidden="true"></i>
+                </div>
             </div>
             <div class="description">
                 Do każdego masażu podchodzę indywidualnie. Po rozmowie wspólnie wykreujemy drogę działania.
@@ -213,39 +439,3 @@
 </body>
 
 </html>
-
-<!--
-    <section class="offer">
-            <h1>Oferta</h1>
-            <div class="offer-wrapper">
-                <div class="main-offer">
-                    <h3>Oferuję masaż klasyczny i relaksacyjny:</h3>
-                    <ul>
-                        <li>całego ciała</li>
-                        <li>pleców</li>
-                        <li>kręgosłupa</li>
-                        <li>nóg</li>
-                        <li>rąk</li>
-                        <li>twarzy</li>
-                        <li>karku</li>
-                        <li>obręczy barkowej</li>
-                        <li>brzucha</li>
-                    </ul>
-                </div>
-                <div class="price-list">
-                    <h2>Cennik</h2>
-                    <h3>30 minut - 40 zł</h3>
-                    <h3>60 minut - 75 zł</h3>
-                    <div class="bonus-paragraph">
-                        <div class="bonus-text">Masaże wykonuję na profesjonalnym łóżku, używając naturalnych
-                            olejków.</div>
-                        <div class="bonus-text">Masaże z <strong>DOJAZDEM</strong> na terenie powiatu kieleckiego i
-                            koneckiego w cenie.
-                        </div>
-                        <div class="bonus-text">Stale poszerzam swoje kwalifikacje by zaproponować Państwu nowe
-                            techniki masażu.</div>
-                    </div>
-                </div>
-            </div>
-        </section>
--->
