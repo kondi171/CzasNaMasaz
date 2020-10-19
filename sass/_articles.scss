@@ -61,12 +61,21 @@ section.articles {
 }
 
 //***Media Queries***
-@media (min-width: 540px) and (orientation: landscape) {
+@media (min-width: 700px) {
     section.articles {
-        width: 100%;
-        .img-cover {
-            width: 50vw;
-            height: 50vw;
+        article.single-article { 
+            .img-cover {
+                width: 50%;
+                height: 50vh;
+                .img-content {
+                    height: 50vh;  
+                }
+                .article-content {   
+                    h1 {
+                      font-size: 4.5rem;
+                    }
+                }
+            }
         }
     }
 }

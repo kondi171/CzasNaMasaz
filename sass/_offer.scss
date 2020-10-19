@@ -41,7 +41,7 @@ section.offer {
     .description {
         width: 100%;
         text-align: center;
-        padding: $sectionSpace 0;
+        padding: $sectionSpace;
         border-top: 2px solid $darkColor;
     }
     .aside-description {
@@ -53,12 +53,10 @@ section.offer {
     .modal {
         display: none;
         position: fixed;
-        top: 20%;
-        bottom: 20%;
+        top: 15%;
         left: 10%;
         right: 10%;
         width: 80%;
-        height: 60%;
         border-radius: 5px;
         background-color: $bgColor;
         color: $darkColor;
@@ -73,7 +71,7 @@ section.offer {
         .info-wrapper {
             display: flex;
             justify-content: space-evenly;
-            margin-top: 1rem;
+            margin: 1rem auto;
         }
         .time-wrapper, .price-wrapper {
             display: flex;
@@ -124,7 +122,17 @@ section.offer {
         }
     }
 }
-
+@media (min-width: 700px) {
+    section.offer {
+        .modal {
+            .time-wrapper, .price-wrapper {
+                .fa-clock-o, .fa-money {
+                    font-size: 2.5rem; 
+                }
+            }
+        }
+    }
+}
 @media (min-width: 1024px) {
     section.offer {
         .aside-description {

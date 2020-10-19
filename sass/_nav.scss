@@ -39,6 +39,9 @@ nav.modal-active {
      font-size: 1.5rem;
      li {
          padding: .7rem;
+         &:first-of-type {
+             margin-top: 1rem;
+         }
      }
  }
  .curtain {
@@ -118,7 +121,16 @@ nav.img-nav { height: 100vh; }
         line-height: 12vh;
     }
 }
-
+@media (min-width: 700px) {
+    ul.nav-list.dropdown {
+        li {
+            padding: .7rem;
+            &:first-of-type {
+                margin-top: 2rem;
+            }
+        }
+    }
+}
 @media (min-width: 1024px) and (orientation: landscape) {
     nav.main-nav {
         display: flex;
