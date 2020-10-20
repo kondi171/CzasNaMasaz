@@ -4,7 +4,7 @@ nav.main-nav {
     align-items: center;
     top: 0;
     width: 100vw;
-    height: 8vh;
+    height: 4rem;
     background-color: $darkColor;
     opacity: .9;
     z-index: 10;
@@ -15,9 +15,9 @@ nav.main-nav {
         display: none;
         list-style: none;
     } h1 {
-        font-size: 4vh;
+        font-size: 2rem;
         margin-left: 3vw;
-        line-height: 8vh;
+        line-height: 6rem;
         color: lighten($greyColor, 10%);
         span {
             color: $primaryColor;
@@ -25,7 +25,7 @@ nav.main-nav {
     }
 }
 nav.modal-active {
-    top: -8vh;
+   transform: translateY(-4rem);
 }
  ul.nav-list.dropdown {
      position: fixed;
@@ -108,6 +108,26 @@ nav.img-nav { height: 100vh; }
 
 //***Media Queries***
 
+@media (max-width: 300px) {
+    nav.main-nav {
+        height: 3rem;
+        h1 {
+            font-size: 1rem;
+            line-height: 3rem;
+        } 
+    }
+    .hamburger-btn {
+        font-size: 1rem;
+        line-height: 3rem;
+    }
+}
+
+@media (max-height: 300px) and (orientation: landscape) {
+    nav.main-nav {
+        min-height: 3rem;
+    }
+}
+
 @media (min-width: 540px) and (orientation: landscape) {
     nav.main-nav {
         height: 12vh;
@@ -131,17 +151,18 @@ nav.img-nav { height: 100vh; }
         }
     }
 }
-@media (min-width: 1024px) and (orientation: landscape) {
+@media (min-width: 1024px) {
     nav.main-nav {
         display: flex;
         align-items: center;
+        height: 6rem;
         ul.nav-list {
             display: flex;
             flex-basis: 70%;
             justify-content: flex-end;
-            font-size: 1.6rem;
+            font-size: 2rem;
             .item-list {
-                margin-left: 4vh;
+                margin: 0 1rem;
                 width: 80% / 4;
                 color: $greyColor;
                 transition: .3s;

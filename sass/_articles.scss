@@ -61,20 +61,75 @@ section.articles {
 }
 
 //***Media Queries***
-@media (min-width: 700px) {
+
+@media (max-width: 300px) {
+    section.articles {
+        article.single-article {
+            .img-cover {
+                width: 70%;
+                height: 20vh;
+                .img-content {
+                    height: 20vh;  
+                }
+            }
+             h1 {
+                font-size: 1.2rem;
+            } p {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+@media (max-height: 300px) and (orientation: landscape) {
+    section.articles {
+        article.single-article {
+            .img-cover {
+                width: 60%;
+                height: 60vh;
+                .img-content {
+                    height: 60vh;  
+                }
+            }
+            
+        }
+    }
+}
+
+@media (min-width: 540px) {
     section.articles {
         article.single-article { 
             .img-cover {
-                width: 50%;
+                width: 70%;
                 height: 50vh;
                 .img-content {
                     height: 50vh;  
                 }
-                .article-content {   
-                    h1 {
-                      font-size: 4.5rem;
-                    }
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            p {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 700px) {
+    section.articles {
+        article.single-article { 
+            .img-cover {
+                width: 70%;
+                height: 50vh;
+                .img-content {
+                    height: 50vh;  
                 }
+            }
+            h1 {
+                font-size: 3.5rem;
+            }
+            p {
+                font-size: 2rem;
             }
         }
     }
@@ -89,16 +144,22 @@ section.articles {
             align-items: center;
             justify-content: space-evenly; 
             margin-bottom: $sectionSpace;
-            transform: translateY(1000px);
+            transform: translateX(1500px) scale(0);
+            transition: 2s;
+            visibility: hidden;
+            &:nth-of-type(2n){
+                transform: translateX(-1500px) scale(0);
+            }
             &.scroll-top {
-                transform: translateY(0);
+                transform: translateX(0) scale(1);
+                visibility: visible;
             }
             .img-cover {
                 width: 30%;
-                height: 65vh;
-                margin-left: 10vh;
+                height: 40vh;
+                margin-left: $sectionSpace;
                 .img-content {
-                    height: 65vh;  
+                    height: 40vh;  
                 }
                 .first-article-img {
                     background-image: url(../img/desktop/classic.jpg);

@@ -1,44 +1,68 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const time = 4000;
-    let activeSlide = 1;
-    const numberofSlide = 3;
-    const header = document.querySelector('header.main-header');
-    const dots = document.querySelectorAll('.dots i');
+    const slideList = [{
+        desktop: "../img/desktop/header1.jpg",
+        mobile: "../img/mobile/header1.jpg"
+    },
+    {
+        desktop: "../img/desktop/header2.jpg",
+        mobile: "../img/mobile/header2.jpg"
+    },
+    {
+        desktop: "../img/desktop/header3.jpg",
+        mobile: "../img/mobile/header3.jpg"
+    }];
+
+    let active = 0;
+    const time = 8000;
+    const image = document.querySelector('img.main-slide');
+    const dots = [...document.querySelectorAll('.dots i')];
     const leftAngle = document.querySelector('.fa-angle-left');
     const rightAngle = document.querySelector('.fa-angle-right');
-    // podziel na dwie osobne funkcje odpowiedzialne za kropeczki i slajd, dzieki temu pozbędziemy się redundancji kodu.
-    const slider = () => {
-        if (activeSlide >= numberofSlide) {
-            dots[numberofSlide - 1].classList.remove('active-dot');
-            header.classList.remove(`slide-${activeSlide}`);
-            activeSlide = 1;
-            dots[activeSlide - 1].classList.add('active-dot');
-            header.classList.add(`slide-${activeSlide}`);
-        } else {
-            header.classList.remove(`slide-${activeSlide}`);
-            header.classList.add(`slide-${++activeSlide}`);
-            dots[activeSlide - 1].classList.add('active-dot');
-            dots[activeSlide - 2].classList.remove('active-dot');
-        }
+    const offset = window.innerWidth >= 1024 ? true : false;
+
+    if (offset) image.src = slideList[active].desktop;
+    else image.src = slideList[active].mobile;
+
+    const changeDot = () => {
+        const activeDot = dots.findIndex(dot => dot.classList.contains('active-dot'));
+        dots[activeDot].classList.remove('active-dot');
+        dots[active].classList.add('active-dot');
     }
 
-    const sliderInterval = window.setInterval(slider, time);
+    const autoChangeSlide = () => {
+        active++;
+        const offset = window.innerWidth >= 1024 ? true : false;
+        console.log(offset);
+        if (active === slideList.length) active = 0;
+        if (offset) image.src = slideList[active].desktop;
+        else image.src = slideList[active].mobile;
+        slider();
+    }
+    const slider = () => {
+        image.animate([
+            { opacity: '.3' },
+            { opacity: '1' }
+        ], {
+            duration: 1000,
+            iterations: 1
+        });
+        changeDot()
+    }
 
-    dots[0].addEventListener('click', function () {
-        window.clearInterval(sliderInterval);
-        dots.forEach(dot => {
-            dot.classList.remove('active-dot');
-        })
-        this.classList.add('active-dot');
-        header.classList.remove(`slide-${activeSlide}`);
-        header.classList.add(`slide-1`);
-        window.setInterval(slider, time);
-    });
+    let sliderInterval = setInterval(autoChangeSlide, time);
 
     leftAngle.addEventListener('click', () => {
         window.clearInterval(sliderInterval);
+        const offset = window.innerWidth <= 1024 ? true : false;
+        if (active === 0) active = slideList.length;
+        if (offset) image.src = slideList[--active].desktop;
+        else image.src = slideList[--active].mobile;
+        slider();
+        sliderInterval = setInterval(autoChangeSlide, time);
     });
     rightAngle.addEventListener('click', () => {
         window.clearInterval(sliderInterval);
+        autoChangeSlide();
+        sliderInterval = setInterval(autoChangeSlide, time);
     });
 });

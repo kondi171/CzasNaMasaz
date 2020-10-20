@@ -9,6 +9,7 @@ section.offer {
         padding: $sectionSpace/2 0;
         border-bottom: 3px solid $darkColor;
         text-transform: uppercase;
+        margin: 0;
         &::first-letter {
             color: $bgColor;
             text-shadow: 1px 1px 1px $darkColor;
@@ -100,34 +101,31 @@ section.offer {
 //***Media Queries***
 @media (min-width: 540px) {
     section.offer {
-        h1 {
-            font-size: 10vh;
-        }
-        .offer-wrapper {
-            .price-list {
-                h2 {
-                font-size: 10vh;
-                }
+        .modal {
+            h3 {
+                font-size: 2rem;
             }
-            .main-offer ul {
-                font-size: 8vh;
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-                padding: 3vh;
-                li {
-                    flex-basis: 50%;
+            .info-wrapper {
+                font-size: 1.5rem;
+            }
+            .description {
+                font-size: 1.5rem;
+            }
+            .time-wrapper, .price-wrapper {
+                .fa-clock-o, .fa-money {
+                    font-size: 2rem; 
                 }
             }
         }
     }
 }
+
 @media (min-width: 700px) {
     section.offer {
         .modal {
             .time-wrapper, .price-wrapper {
                 .fa-clock-o, .fa-money {
-                    font-size: 2.5rem; 
+                    font-size: 2rem; 
                 }
             }
         }
@@ -139,6 +137,7 @@ section.offer {
             width: 100%;
             margin: 0;
             background-color: lighten($primaryColor,10%);
+            padding: $sectionSpace;
         }
         h1 {
             font-size: 4rem;

@@ -23,6 +23,11 @@ body {
 
 .main-btn {
     @include btnDesign;
+    transition: .3s;
+    &:hover {
+        background-color: darken($bgColor, 20%);
+        cursor: pointer;
+    }
 }
 
 @media (min-width: 700px) {

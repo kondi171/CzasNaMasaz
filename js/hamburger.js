@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const yOffset = -(window.innerHeight / 10);
 
     const toggleMenu = () => {
-        if (window.innerWidth <= 1024) {
+        if (window.innerWidth < 1024) {
             burger.classList.toggle('active');
             dropdown.classList.toggle('dropdown');
             curtain.classList.toggle('curtain');
