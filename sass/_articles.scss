@@ -1,4 +1,6 @@
 section.articles {
+    background-color: $bgColor;
+    padding: $sectionSpace 0;
     article.single-article {
         width: 80%;
         margin: $sectionSpace auto;
@@ -18,19 +20,19 @@ section.articles {
                 opacity: .6;
             }
             .first-article-img {
-                background-image: url(../img/mobile/classic.jpg);
+                background-image: url(../img/mobile/classic.WebP);
             }
             .second-article-img {
-                background-image: url(../img/mobile/relax.jpg);
+                background-image: url(../img/mobile/relax.WebP);
             }
             .third-article-img {
-                background-image: url(../img/mobile/bubbles.jpg);
+                background-image: url(../img/mobile/bubbles.WebP);
             }
             .fourth-article-img {
-                background-image: url(../img/mobile/rocks.jpg);
+                background-image: url(../img/mobile/rocks.WebP);
             }
             .fifth-article-img {
-                background-image: url(../img/mobile/adventages.jpg);
+                background-image: url(../img/mobile/adventages.WebP);
             }
         } h1 {
             letter-spacing: 3px;
@@ -162,19 +164,19 @@ section.articles {
                     height: 40vh;  
                 }
                 .first-article-img {
-                    background-image: url(../img/desktop/classic.jpg);
+                    background-image: url(../img/desktop/classic.WebP);
                 }
                 .second-article-img {
-                    background-image: url(../img/desktop/relax.jpg);
+                    background-image: url(../img/desktop/relax.WebP);
                 }
                 .third-article-img {
-                    background-image: url(../img/desktop/bubbles.jpg);
+                    background-image: url(../img/desktop/bubbles.WebP);
                 }
                 .fourth-article-img {
-                    background-image: url(../img/desktop/rocks.jpg);
+                    background-image: url(../img/desktop/rocks.WebP);
                 }
                 .fifth-article-img {
-                    background-image: url(../img/desktop/adventages.jpg);
+                    background-image: url(../img/desktop/adventages.WebP);
                 }
             }
             .article-content {

@@ -75,9 +75,14 @@ nav.img-nav {
         background-color: $darkColor;
         margin: 1vh;
         border-radius: 50%;
+        transition: .2s;
         &.active-dot {
             background-color: transparent;
             border: 2px solid $darkColor;
+        }
+        &:hover {
+            cursor: pointer;
+            background-color: $greyColor;
         }
     }
     

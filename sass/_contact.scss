@@ -1,6 +1,6 @@
 section.contact {
     background-color: $greyColor;
-    background-image: url(../img/mobile/contact.jpg);
+    background-image: url(../img/mobile/contact.WebP);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -74,8 +74,8 @@ section.contact {
             padding-top: 10px;
             i, span {
                 font-size: .8rem;
-                color: $darkColor;
-                text-decoration:none;
+                color: $darkColor!important;
+                text-decoration:none!important;
             }
         }
     }
@@ -95,7 +95,7 @@ section.contact {
 
 @media (min-width: 700px) {
     section.contact {
-        background-image: url(../img/desktop/contact.jpg);
+        background-image: url(../img/desktop/contact.WebP);
         form.overlay {
             .social-media {
                 i, span {
