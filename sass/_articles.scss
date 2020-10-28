@@ -4,6 +4,10 @@ section.articles {
     article.single-article {
         width: 80%;
         margin: $sectionSpace auto;
+        &.scroll-top {
+                transform: translateX(0) scale(1);
+                visibility: visible;
+            }
         .img-cover {
             background-color:black;
             width: 70vw;
@@ -151,10 +155,6 @@ section.articles {
             visibility: hidden;
             &:nth-of-type(2n){
                 transform: translateX(-1500px) scale(0);
-            }
-            &.scroll-top {
-                transform: translateX(0) scale(1);
-                visibility: visible;
             }
             .img-cover {
                 width: 30%;

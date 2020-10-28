@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const othersBottomBtn = document.getElementById('others-bottom');
     const legsBtn = document.getElementById('legs');
     const closeBtn = document.querySelectorAll('.close-btn');
-
     //Modal's
     const classicModal = document.querySelector('.classic-modal');
     const relaxModal = document.querySelector('.relax-modal');
@@ -25,8 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const othersTopModal = document.querySelector('.others-top-modal');
     const othersBottomModal = document.querySelector('.others-bottom-modal');
     const legsModal = document.querySelector('.legs-modal');
-
-
+    const successModal = document.querySelector('.success-modal');
+    const errorModal = document.querySelector('.error-modal');
     const toogleModals = () => {
         bodyOverlay.classList.toggle('curtain');
         nav.classList.toggle('modal-active');
@@ -68,9 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
         toogleModals();
         legsModal.classList.add('active');
     });
-
-
-
     closeBtn.forEach(btn => {
         btn.addEventListener('click', () => {
             toogleModals();
@@ -83,6 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
             othersTopModal.classList.remove('active');
             othersBottomModal.classList.remove('active');
             legsModal.classList.remove('active');
+            errorModal.classList.remove('active-modal');
+            successModal.classList.remove('active-modal');
         });
     });
 });

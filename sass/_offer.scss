@@ -52,17 +52,10 @@ section.offer {
         margin: 0 10%;
     }
     .modal {
-        display: none;
-        position: fixed;
-        top: 15%;
-        left: 10%;
-        right: 10%;
-        width: 80%;
-        border-radius: 5px;
+        @include popUpModal;
+        display: none; 
         background-color: $bgColor;
         color: $darkColor;
-        z-index: 10;
-        transition: 3s;
         box-shadow: .2rem .2rem .2rem 0 $supportColor;
         h3 {
             font-size: 1rem;

@@ -1,0 +1,167 @@
+body.post {
+    background-color: $greyColor;
+    box-sizing: border-box;
+    color: $darkColor;
+    .flex-post {
+        position: fixed;
+        width: 100%;
+        height: 7rem;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: $darkColor;
+        font-family: $mainFont;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        opacity: .9;
+        z-index: 10;
+        border-bottom: .2vh solid $primaryColor;
+        box-shadow: 0 0 .8vh .2vh $primaryColor;
+        text-align: center;
+        color: $bgColor;
+        h1.header a {
+            color: white;
+            text-decoration: none;
+            font-size: 2rem;
+            b {
+                color: $primaryColor;
+            }
+        }
+        .all-messages {
+            font-size: 1rem;
+        }
+    }
+    .no-messages {
+        text-align: center;
+        padding-top: 9rem;
+        width: 80%;
+        font-size: 2rem;
+        margin: 0 auto;
+    }
+    .primary-color {
+        color: $primaryColor;
+     }
+     .support-message-title {
+         font-weight: bold;
+         font-size: 1.3rem;
+         padding-bottom: .5rem;
+         letter-spacing: 2px;
+     }
+     .message-wrapper{
+        width: 100%;
+        max-height: 50%;
+         &:nth-of-type(2n) {
+            background-color: darken($greyColor,10%);
+            border-bottom: 3px solid $greyColor;
+         }
+     }
+    .message {
+        text-align: center;
+        background-color: $primaryColor;
+        border-radius: .4rem;
+        width: 80%;
+        transform: translateY(-7rem);
+        
+        &:first-of-type {
+            margin-top: 15rem;
+        }
+    }
+    div {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    span:first-of-type {
+        width: 30%;
+    }
+    span:last-of-type {
+        width: 70%;
+    }
+    span {
+        display: block;
+        width: 100%;
+        background-color: $supportColor;
+        border-radius: .4rem;
+        padding: .3rem;
+        margin: .2rem .7rem;
+        font-weight: bold;
+    }
+    .message-title {
+        font-family: $mainFont;
+        padding: 1rem;
+    }
+
+    .admin-btn {
+        @include btnDesign;
+        transition: .3s;
+        width: 25%;
+        border-bottom-left-radius: 40%;
+        border-bottom-right-radius: 40%;
+        transform: translateY(2rem);
+        &:hover {
+            background-color: darken($bgColor, 20%);
+            cursor: pointer;
+        }
+    }
+    .logout-btn {
+        @include btnDesign;
+        transition: .3s;
+        transform: translateY(-2rem);
+        &:hover {
+            background-color: darken($bgColor, 20%);
+            cursor: pointer;
+        }
+    }
+    .switch-password-btn {
+        @include btnDesign;
+        transition: .3s;
+        &:hover {
+            background-color: darken($bgColor, 20%);
+            cursor: pointer;
+        }
+    }
+    .admin-panel {
+        background-color: $darkColor;
+        width: 100%;
+        height: 100%;
+    }
+    form.message {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        border: 2px solid $darkColor;
+        margin: 0 auto;
+        input {
+            text-align: center;
+            margin: 1rem 0;
+            height: 2rem;
+            border-radius: 8px solid $darkColor;
+        }
+    }
+}
+
+body.log {
+    section.contact {
+        display: flex;
+        flex-wrap:wrap;
+        min-height: 100vh;
+        width: 100%;
+    }
+    form.overlay {
+        height: 50%;
+        padding: 2rem;
+        margin-bottom: 2rem!important;
+    }
+    section.contact > h1 {
+        font-size: 3rem;
+        height: 25%;
+        padding: 2rem 1rem;
+        border-bottom: none;
+    }
+    @media (max-width: 600px) {
+        section.contact > h1 {
+            font-size: 1.5rem;
+        }
+    }
+}

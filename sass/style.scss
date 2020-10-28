@@ -8,6 +8,7 @@
 @import '_offer.scss';
 @import '_contact.scss';
 @import '_footer.scss';
+@import '_others.scss';
 
 * {
     margin: 0;
@@ -30,6 +31,55 @@ i {font-display: swap;}
         background-color: darken($bgColor, 20%);
         cursor: pointer;
     }
+}
+
+.success-modal, .error-modal {
+    @include popUpModal;
+    display: none;
+    top: 20%;
+    text-align: center;
+    padding: 1rem;
+    &.active-modal {
+        display: block;
+    }
+    h3 {
+        font-size: 2rem;
+        padding-bottom: 1rem;
+    }
+    ul {
+        list-style: none;
+    }
+    .description {
+        font-size: 1.5rem;
+        padding-top: 1rem;
+    }
+    .close-btn {
+        position: absolute;
+        font-size: 2rem;
+        right: -1rem;
+        top: -1.3rem;
+        color: $greyColor;
+        padding-left: 1rem;
+        transition: .3s;
+        &:hover {
+            color: darken($greyColor,10%);
+            cursor: pointer;
+        }
+    }
+}
+
+.fa-check-circle-o, .fa-times-circle-o{
+    font-size: 20vh;
+}
+.success-modal {
+    color: #24a005;
+    background-color: rgb(120, 255, 80);
+    border: 2px solid #24a005;
+}
+.error-modal {
+    color: #cf0303;
+    background-color: rgb(250, 135, 135);
+    border: 2px solid #cf0303;
 }
 
 @font-face {

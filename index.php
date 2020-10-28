@@ -1,3 +1,4 @@
+<?php session_start(); $nav = true; ?>
 <!DOCTYPE html>
 <html lang="pl">
 
@@ -16,8 +17,49 @@
     <title>CzasNaMasaż.pl</title>
 </head>
 
-<body>
+<body <?php if(isset($_SESSION['success']) || isset($_SESSION['error'])) echo 'class="curtain"';?>>
     <div class="wrapper">
+        <div class="success-modal<?php if(isset($_SESSION['success'])) echo ' active-modal';?>">
+            <h3>Udało się!</h3>
+            <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+            <div class="description">Operacja Wykonana!</div>
+            <?php 
+                if(isset($_SESSION['success'])) $nav = false;
+                unset($_SESSION['success']); ?> 
+            <i class="fa fa-times-circle close-btn" aria-hidden="true"></i>
+        </div>
+        <div class="error-modal<?php if(isset($_SESSION['error'])) echo ' active-modal';?>">
+            <h3>Coś poszło nie tak...</h3>
+            <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+            <div class="description">Nie udało się, spróbuj ponownie.</div>
+            <ul class="description">
+            <?php 
+                if(isset($_SESSION['dbProblem'])) {
+                    echo ' <li>Błąd serwera!</li>';
+                    unset($_SESSION['dbProblem']);
+                }
+                if(isset($_SESSION['errorName'])) {
+                    echo '<li>'.$_SESSION['errorName'].'</li>';
+                    unset($_SESSION['errorName']);
+                }
+                if(isset($_SESSION['errorMail'])) {
+                    echo '<li>'.$_SESSION['errorMail'].'</li>';
+                    unset($_SESSION['errorMail']);
+                }
+                if(isset($_SESSION['errorPhone'])) {
+                    echo '<li>'.$_SESSION['errorPhone'].'</li>';
+                    unset($_SESSION['errorPhone']);
+                }
+                if(isset($_SESSION['errorMessage'])) {
+                    echo '<li>'.$_SESSION['errorMessage'].'</li>';
+                    unset($_SESSION['errorMessage']);
+                }
+                if(isset($_SESSION['error'])) $nav = false;
+                unset($_SESSION['error']);
+            ?> 
+            </ul>
+            <i class="fa fa-times-circle close-btn" aria-hidden="true"></i>
+        </div>    
         <header class="main-header slide-1">
             <h1>Czas Na Masaż</h1>
             <nav class="img-nav">
@@ -31,13 +73,13 @@
                 </div>
             </nav>
         </header>
-        <nav class="main-nav">
+        <nav class="main-nav<?php if((!isset($_SESSION['success']) || !isset($_SESSION['error'])) && $nav != true) echo ' modal-active';?>">
             <div class="hamburger-btn">
                 <div class="top-paddle"></div>
                 <div class="middle-paddle"></div>
                 <div class="bottom-paddle"></div>
             </div>
-            <h1>Czas<span>Na</span>Masaż<span>.pl</span></h1>
+            <h1 id="scrollTop">Czas<span>Na</span>Masaż<span>.pl</span></h1>
             <ul class="nav-list">
                 <li class="item-list articles-item">Artykuły</li>
                 <li class="item-list about-item">O mnie</li>
@@ -377,23 +419,23 @@
         </section>
         <section class="contact">
             <h1>Kontakt</h1>
-            <form class="overlay">
+            <form class="overlay" method="POST" action="php/contact.php">
                 <h2>Napisz do mnie!</h2>
                 <label for="name">
                     <span class="label-span">Imię:</span>
-                    <input name="name" type="text" placeholder="Podaj imię...">
+                    <input name="name" value="<?php if(isset($_SESSION['rememberName'])) echo $_SESSION['rememberName']; unset($_SESSION['rememberName']); ?>" type="text" placeholder="Podaj imię...">
                 </label>
                 <label for="email">
                     <span class="label-span">E-mail:</span>
-                    <input name="email" type="email" placeholder="Podaj e-mail...">
+                    <input name="email" value="<?php if(isset($_SESSION['rememberMail'])) echo $_SESSION['rememberMail']; unset($_SESSION['rememberMail']); ?>" type="email" placeholder="Podaj e-mail...">
                 </label>
                 <label for="phone">
                     <span class="label-span">Nr telefonu:</span>
-                    <input name="phone" type="text" placeholder="Podaj nr telefonu...">
+                    <input name="phone" value="<?php if(isset($_SESSION['rememberPhone'])) echo $_SESSION['rememberPhone']; unset($_SESSION['rememberMail']); ?>" type="text" placeholder="Podaj nr telefonu...">
                 </label>
                 <label for="message">
                     <span class="label-span">Wiadomość:</span>
-                    <textarea name="message" id="" cols="30" rows="10"></textarea>
+                    <textarea name="message" maxlength="300" cols="30" rows="10"><?php if(isset($_SESSION['rememberMessage'])) echo $_SESSION['rememberMessage']; unset($_SESSION['rememberMessage']); ?></textarea>
                 </label>
                 <button class="main-btn" id="send-btn">Wyślij</button>
                 <div class="social-media">
@@ -466,7 +508,7 @@
         </footer>
     </div>
     <script src="js/hamburger.js"></script>
-    <script src="js/slider.js"></script>
+    <!-- <script src="js/slider.js"></script> -->
     <script src="js/modals.js"></script>
     <script src="js/scrollTop.js"></script>
 </body>
