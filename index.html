@@ -377,16 +377,40 @@
         </section>
         <section class="contact">
             <h1>Kontakt</h1>
-            <div class="social-media">
-                <div class="social-mail">
-                    <b class="fa fa-envelope" aria-hidden="true"></b>
-                    <span class="mail">marcin.kasinski@opoczta.pl</span>
+            <form class="overlay" method="POST" action="https://formspree.io/f/mgepypzr">
+                <h2>Napisz do mnie!</h2>
+                <label for="name">
+                    <span class="label-span">Imię:</span>
+                    <input name="name" type="text" placeholder="Podaj imię...">
+                </label>
+                <label for="email">
+                    <span class="label-span">E-mail:</span>
+                    <input name="email" type="email" placeholder="Podaj e-mail...">
+                </label>
+                <label for="phone">
+                    <span class="label-span">Nr telefonu:</span>
+                    <input name="phone" type="text" placeholder="Podaj nr telefonu...">
+                </label>
+                <label for="message">
+                    <span class="label-span">Wiadomość:</span>
+                    <textarea name="message" maxlength="300" cols="30" rows="10"></textarea>
+                </label>
+                <button class="main-btn" id="send-btn">Wyślij</button>
+                <div class="iferror">
+                    W przypadku nie powodzenia wysłania wiadomości, jestem dostępny również:
                 </div>
-                <div class="social-phone">
-                    <b class="fa fa-phone" aria-hidden="true"></b>
-                    <span class="phone">+ 48 799 868 297</span>
+                <div class="social-media">
+                    <div class="social-mail">
+                        <b class="fa fa-envelope" aria-hidden="true"></b>
+                        <span class="mail">marcin.kasinski@opoczta.pl
+                        </span>
+                    </div>
+                    <div class="social-phone">
+                        <b class="fa fa-phone" aria-hidden="true"></b>
+                        <span class="phone">+ 48 799 868 297</span>
+                    </div>
                 </div>
-            </div>
+            </form>
             <br />
         </section>
         <footer class="footer">

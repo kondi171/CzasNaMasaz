@@ -28,8 +28,6 @@ section.about {
         text-align-last: center;
     }
 }
-
-//***Media Queries***
 @media (min-width: 540px) {
     section.about {
         img.author-img { 
@@ -55,15 +53,13 @@ section.about {
         }
         h1.author-name {
             font-size: 4rem;
-            margin-bottom: 1vh;
-            
+            margin-bottom: 1vh;           
         }
         p.about-me {
             width: 100%;
             margin: 0 auto 1rem auto;
             font-size: 1.6rem;
             line-height: 150%;
-            //padding-bottom: 2rem;
         }
     }
 }

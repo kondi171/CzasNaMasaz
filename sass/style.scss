@@ -16,14 +16,11 @@
     box-sizing: border-box;
     font-family: $asideFont;
 }
-
 body {
     background-color: #000;
     overflow-x: hidden;
 }
-
-i {font-display: swap;}
-
+i { font-display: swap; }
 .main-btn {
     @include btnDesign;
     transition: .3s;
@@ -32,67 +29,4 @@ i {font-display: swap;}
         cursor: pointer;
     }
 }
-
-.success-modal, .error-modal {
-    @include popUpModal;
-    display: none;
-    top: 20%;
-    text-align: center;
-    padding: 1rem;
-    &.active-modal {
-        display: block;
-    }
-    h3 {
-        font-size: 2rem;
-        padding-bottom: 1rem;
-    }
-    ul {
-        list-style: none;
-    }
-    .description {
-        font-size: 1.5rem;
-        padding-top: 1rem;
-    }
-    .close-btn {
-        position: absolute;
-        font-size: 2rem;
-        right: -1rem;
-        top: -1.3rem;
-        color: $greyColor;
-        padding-left: 1rem;
-        transition: .3s;
-        &:hover {
-            color: darken($greyColor,10%);
-            cursor: pointer;
-        }
-    }
-}
-
-.fa-check-circle-o, .fa-times-circle-o{
-    font-size: 20vh;
-}
-.success-modal {
-    color: #24a005;
-    background-color: rgb(120, 255, 80);
-    border: 2px solid #24a005;
-}
-.error-modal {
-    color: #cf0303;
-    background-color: rgb(250, 135, 135);
-    border: 2px solid #cf0303;
-}
-
-@font-face {
-    font-family: 'Pacifico';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Pacifico Regular'), local('Pacifico-Regular'), url(https://fonts.gstatic.com/s/pacifico/v12/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2) format('woff2');
-    font-display: swap;
-  }
-
-
-@media (min-width: 700px) {
-    body {
-        font-size: 1.5rem;
-    }
-}
+@media (min-width: 700px) { body { font-size: 1.5rem; }}

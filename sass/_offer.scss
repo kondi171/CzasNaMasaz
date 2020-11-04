@@ -24,7 +24,6 @@ section.offer {
                          1px 1px 0 $bgColor,
                         -1px -1px 0 $bgColor;
         }
-    
         .main-btn {
             width: 50%;
             margin-right: 5%;
@@ -35,8 +34,7 @@ section.offer {
             button.main-btn {
                 margin-right: 0;
                 margin-left: 5%;
-            }
-            
+            }   
         }
     }
     .description {
@@ -86,34 +84,8 @@ section.offer {
             padding-left: 1rem;
         }
     }
-    .active {
-        display: block;
-    }
-    
+    .active { display: block; } 
 }
-
-//***Media Queries***
-// @media (min-width: 540px) {
-//     section.offer {
-//         .modal {
-//             h3 {
-//                 font-size: 2rem;
-//             }
-//             .info-wrapper {
-//                 font-size: 1.5rem;
-//             }
-//             .description {
-//                 font-size: 1.5rem;
-//             }
-//             .time-wrapper, .price-wrapper {
-//                 .fa-clock-o, .fa-money {
-//                     font-size: 2rem; 
-//                 }
-//             }
-//         }
-//     }
-// }
-
 @media (min-width: 700px) {
     section.offer {
         .modal {

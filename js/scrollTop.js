@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
     const articles = document.querySelectorAll('article.single-article');
     const mainLogo = document.getElementById('scrollTop');
     const numberOfArticles = articles.length;

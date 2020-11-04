@@ -5,10 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const about = document.querySelector('.about-item');
     const offer = document.querySelector('.offer-item');
     const contact = document.querySelector('.contact-item');
-
     const curtain = document.body;
     const yOffset = -(window.innerHeight / 10);
-
     const toggleMenu = () => {
         if (window.innerWidth < 1024) {
             burger.classList.toggle('active');
@@ -16,11 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
             curtain.classList.toggle('curtain');
         }
     }
-
     burger.addEventListener('click', () => {
         toggleMenu();
     });
-
     articles.addEventListener('click', () => {
         const y = document.querySelector('section.articles').getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: 'smooth' });

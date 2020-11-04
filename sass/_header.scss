@@ -25,7 +25,6 @@ header.main-header {
         z-index: 2;
     }
 }
-
 nav.img-nav {
     display: flex;
     position: relative;
@@ -39,7 +38,6 @@ nav.img-nav {
         height: 100vh;
     }
 }
-
 .fa-angle-left {
     position: absolute;
     left: 1vh;
@@ -50,7 +48,6 @@ nav.img-nav {
         transform: scale(1.2);
     }
 }
-
 .fa-angle-right {
     position: absolute;
     right: 1vh;
@@ -61,7 +58,6 @@ nav.img-nav {
         transform: scale(1.2);
     }
 }
-
 .dots {
     position: absolute;
     bottom: .5vh;
@@ -84,67 +80,40 @@ nav.img-nav {
             cursor: pointer;
             background-color: $greyColor;
         }
-    }
-    
+    }   
 }
-
 @keyframes mainLogo {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(15px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+    0% { transform: translateY(0); }
+    50% { transform: translateY(15px); }
+    100% { transform: translateY(0); }
 }
-
 @keyframes leftAngle {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(5px);
-    }
-    100% {
-        transform: translateX(0);
-    }
+    0% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
 }
 
 @keyframes rightAngle {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(-5px);
-    }
-    100% {
-        transform: translateX(0);
-    }
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
 }
-
-//***Media Queries***
-
 @media (min-width: 700px){
     header.main-header {
-        h1 {
-            font-size: 6rem;
-        }
+        h1 { font-size: 6rem; }
     }
 }
-
 @media (min-width: 1024px){
     header.main-header {
         height: 100vh;
         &.slide-1 {
-            background-image: url(../img/desktop/header1.jpg);
+            background-image: url(../img/desktop/header1.WebP);
         }
         &.slide-2 {
-            background-image: url(../img/desktop/header2.jpg);
+            background-image: url(../img/desktop/header2.WebP);
         }
         &.slide-3 {
-            background-image: url(../img/desktop/header3.jpg);
+            background-image: url(../img/desktop/header3.WebP);
         }
         background-attachment: fixed;
         h1 {

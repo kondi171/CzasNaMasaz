@@ -32,13 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
         image.src = slideList[active].mobile;
         authorImg.src = authorImgContent[0].mobile;
     }
-
     const changeDot = () => {
         const activeDot = dots.findIndex(dot => dot.classList.contains('active-dot'));
         dots[activeDot].classList.remove('active-dot');
         dots[active].classList.add('active-dot');
     }
-
     const autoChangeSlide = () => {
         active++;
         const offset = window.innerWidth >= 1024 ? true : false;
@@ -49,17 +47,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     const slider = () => {
         image.animate([
-            { opacity: '.3' },
-            { opacity: '1' }
+            { opacity: 0 },
+            { opacity: .5 }
         ], {
-            duration: 1000,
-            iterations: 1
+            duration: 500
         });
         changeDot();
     }
-
     let sliderInterval = setInterval(autoChangeSlide, time);
-
     leftAngle.addEventListener('click', () => {
         window.clearInterval(sliderInterval);
         const offset = window.innerWidth <= 1024 ? true : false;

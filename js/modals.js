@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     //Overlay
     const bodyOverlay = document.body;
     const nav = document.querySelector('nav.main-nav');
-
     //btn's
     const classicBtn = document.getElementById('classic');
     const relaxBtn = document.getElementById('relax');
@@ -24,8 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const othersTopModal = document.querySelector('.others-top-modal');
     const othersBottomModal = document.querySelector('.others-bottom-modal');
     const legsModal = document.querySelector('.legs-modal');
-    const successModal = document.querySelector('.success-modal');
-    const errorModal = document.querySelector('.error-modal');
     const toogleModals = () => {
         bodyOverlay.classList.toggle('curtain');
         nav.classList.toggle('modal-active');
@@ -79,8 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
             othersTopModal.classList.remove('active');
             othersBottomModal.classList.remove('active');
             legsModal.classList.remove('active');
-            errorModal.classList.remove('active-modal');
-            successModal.classList.remove('active-modal');
         });
     });
 });
