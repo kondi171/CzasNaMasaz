@@ -151,11 +151,8 @@ section.articles {
             justify-content: space-evenly; 
             margin-bottom: $sectionSpace;
             transform: translateX(1500px) scale(0);
-            transition: 2s;
+            transition: 1s;
             visibility: hidden;
-            &:nth-of-type(2n){
-                transform: translateX(-1500px) scale(0);
-            }
             .img-cover {
                 width: 30%;
                 height: 40vh;

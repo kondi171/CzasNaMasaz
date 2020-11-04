@@ -20,74 +20,87 @@ section.contact {
             text-shadow: 1px 1px 1px $darkColor;
         }
     }
-    form.overlay {
-        width: 80%;
-        margin: $sectionSpace auto 0 auto;
-        padding: $sectionSpace 0;
-        background-color: $primaryColor;
-        opacity: .9;
-        border-radius: 3px;
-        box-shadow: 1px 1px 10px 1px $darkColor;
-        h2 {
-            font-family: $mainFont;
-            text-align: center;
-            border-bottom: 2px solid $darkColor;
-            padding-bottom: 10px;
-        }
-        .label-span {
-            display: block;
-            text-align: center;
-            padding: 10px 0;
-        }
+    // form.overlay {
+    //     width: 80%;
+    //     margin: $sectionSpace auto 0 auto;
+    //     padding: $sectionSpace 0;
+    //     background-color: $primaryColor;
+    //     opacity: .9;
+    //     border-radius: 3px;
+    //     box-shadow: 1px 1px 10px 1px $darkColor;
+    //     h2 {
+    //         font-family: $mainFont;
+    //         text-align: center;
+    //         border-bottom: 2px solid $darkColor;
+    //         padding-bottom: 10px;
+    //     }
+    //     .label-span {
+    //         display: block;
+    //         text-align: center;
+    //         padding: 10px 0;
+    //     }
         
-        input {
-            width: 70%;
-            display: block;
-            margin: 0 auto;
-            border-radius: 3px;
-            padding: 5px;
-            background-color: $bgColor;
-            border: 1px solid $primaryColor;
-            &::placeholder {
-                text-align: center;
-                font-size: 1.2rem;
-            }
-        }
-        .main-btn {
-            margin: $sectionSpace auto $sectionSpace/2 auto;
-        }
-        textarea {
-            display: block;
-            margin: 0 auto;
-            border-radius: 3px;
-            padding: 5px;
-            background-color: $bgColor;
-            border: 1px solid $primaryColor;
-            min-width: 90%;
-            max-width: 90%;
-            min-height: 40vh;
-            max-height: 40vh;
-        }
-        .social-media {
+    //     input {
+    //         width: 70%;
+    //         display: block;
+    //         margin: 0 auto;
+    //         border-radius: 3px;
+    //         padding: 5px;
+    //         background-color: $bgColor;
+    //         border: 1px solid $primaryColor;
+    //         &::placeholder {
+    //             text-align: center;
+    //             font-size: 1.2rem;
+    //         }
+    //     }
+    //     .main-btn {
+    //         margin: $sectionSpace auto $sectionSpace/2 auto;
+    //     }
+    //     textarea {
+    //         display: block;
+    //         margin: 0 auto;
+    //         border-radius: 3px;
+    //         padding: 5px;
+    //         background-color: $bgColor;
+    //         border: 1px solid $primaryColor;
+    //         min-width: 90%;
+    //         max-width: 90%;
+    //         min-height: 40vh;
+    //         max-height: 40vh;
+    //     }
+    // }
+    
+    .social-media {
+        padding: 2rem;
+        background-color:#6f4e378c;
+        width: 85%;
+        margin: .5rem auto;
+        border-radius: 1rem;
+        .social-mail, .social-phone {
             display: flex;
-            justify-content: space-evenly;
-            padding-top: 10px;
-            i, span {
-                font-size: .8rem;
-                color: $darkColor!important;
-                text-decoration:none!important;
-            }
+            justify-content: center;
+            padding: 1rem;
+        }
+        b {
+            padding-right: 1rem;
+        }
+        b, span {
+            display: block;
+            font-size: 1.3rem;
+            color: $darkColor!important;
+            text-decoration:none!important;
+            text-shadow: .1rem .1rem 0 $supportColor,
+                         -.1rem .1rem 0 $supportColor,
+                         .1rem -.1rem 0 $supportColor,
+                         -.1rem -.1rem 0 $supportColor;
         }
     }
 }
-@media (max-width: 300px) {
+@media (max-width: 280px) {
     section.contact {
-        background-image: url(../img/desktop/contact.jpg);
-        form.overlay {
-            .social-media {
-                i, span {
-                    font-size: .6rem;  
-                }
+        .social-media {
+            b, span {   
+                font-size: 1rem;   
             }
         }
     }
