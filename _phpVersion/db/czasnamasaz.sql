@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.5
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Czas generowania: 23 Paź 2020, 19:03
--- Wersja serwera: 10.3.16-MariaDB
--- Wersja PHP: 7.3.23
+-- Host: 127.0.0.1
+-- Generation Time: Dec 11, 2022 at 05:34 PM
+-- Server version: 10.4.18-MariaDB
+-- PHP Version: 8.0.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,41 +18,65 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Baza danych: `id15199194_czasnamasaz`
+-- Database: `czasnamasaz`
 --
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `czasnamasaz`
+-- Table structure for table `admin`
 --
 
-CREATE TABLE `czasnamasaz` (
+CREATE TABLE `admin` (
   `id` int(11) NOT NULL,
-  `imie` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `telefon` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `wiadomosc` text COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `login` varchar(50) COLLATE utf8_polish_ci NOT NULL,
+  `haslo` varchar(50) COLLATE utf8_polish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+-- --------------------------------------------------------
 
 --
--- Indeksy dla zrzutów tabel
+-- Table structure for table `wiadomosci`
+--
+
+CREATE TABLE `wiadomosci` (
+  `id` int(11) NOT NULL,
+  `imie` varchar(30) COLLATE utf8_polish_ci NOT NULL,
+  `email` varchar(50) COLLATE utf8_polish_ci NOT NULL,
+  `telefon` varchar(20) COLLATE utf8_polish_ci NOT NULL,
+  `wiadomosc` text COLLATE utf8_polish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Indexes for dumped tables
 --
 
 --
--- Indeksy dla tabeli `czasnamasaz`
+-- Indexes for table `admin`
 --
-ALTER TABLE `czasnamasaz`
+ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT dla tabel zrzutów
+-- Indexes for table `wiadomosci`
+--
+ALTER TABLE `wiadomosci`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT dla tabeli `czasnamasaz`
+-- AUTO_INCREMENT for table `admin`
 --
-ALTER TABLE `czasnamasaz`
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `wiadomosci`
+--
+ALTER TABLE `wiadomosci`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
