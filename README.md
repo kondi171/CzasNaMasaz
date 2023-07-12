@@ -1,33 +1,46 @@
+# czasnamasaz
 
-# CzasNaMasaz
+This template should help get you started developing with Vue 3 in Vite.
 
-Website made commisioned by consumer for advertising his services
-in the field of massages. Website was implemented in two versions. One of
-them is with own mailing system implemented in PHP and the second one is with
-external mailing system – **formspree.io** which integrate mail with website form.
+## Recommended IDE Setup
 
-## How to run?
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-To run website with **formspree.io** mailing system:
-Visit deployment: [czas-na-masaz.netlify.app](https://czas-na-masaz.netlify.app/)
+## Type Support for `.vue` Imports in TS
 
-To run website with own mailing system:
--	Download localhost server hosting like **XAMPP** and run **Apache server** and **MySQL**
--	Create in **phpMyAdmin** database *czasnamasaz*, next import to this database *czasnamasaz.sql* file which is in **db** folder. File contains structure of tables
--	Go to **_phpVersion** folder and paste content to main folder replacing *index.html* to *index.php*
--	All project paste to **htdocs** folder in **xampp** folder
--	Db is empty if you want to login type **localhost/php/adminlog.php**, before it create login and password in *phpMyAdmin* in *admin* table
+TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
 
-**IMPORTANT!** Website is no more used by consumer, all website is under development.
+If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
 
-## Tech Stack
+1. Disable the built-in TypeScript Extension
+    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
+    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
+2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
 
-- HTML
-- CSS
-- JavaScript
-- PHP
-- MySQL
+## Customize configuration
 
-## Authors
+See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-- [@kondi171](https://github.com/kondi171)
+## Project Setup
+
+```sh
+npm install
+```
+
+### Compile and Hot-Reload for Development
+
+```sh
+npm run dev
+```
+
+### Type-Check, Compile and Minify for Production
+
+```sh
+npm run build
+```
+
+### Lint with [ESLint](https://eslint.org/)
+
+```sh
+npm run lint
+```

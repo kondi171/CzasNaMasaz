@@ -1,8 +1,32 @@
+<script lang="ts">
+export default {
+    components: {},
+}
+</script>
+<template>
+    <header class="main-header slide-1">
+        <h1>Czas Na Masaż</h1>
+        <nav class="img-nav">
+            <img class="main-slide" src="../assets/img/mobile/header1.WebP" alt="slajd nagłówkowy">
+            <i class="fa fa-angle-left"></i>
+            <i class="fa fa-angle-right"></i>
+            <div class="dots">
+                <i class="first-dot active-dot"></i>
+                <i class="second-dot"></i>
+                <i class="third-dot"></i>
+            </div>
+        </nav>
+    </header>
+</template>
+<style lang="scss" scoped>
+@import './../assets/scss/variables';
+
 header.main-header {
     background-color: $darkColor;
     height: 100vh;
     position: relative;
     box-shadow: 0 0 .6rem .2rem $greyColor;
+
     h1 {
         position: absolute;
         font-family: $mainFont;
@@ -15,16 +39,17 @@ header.main-header {
         left: 10%;
         right: 10%;
         top: 20vh;
-        text-align:center;
+        text-align: center;
         opacity: .9;
         text-shadow: 1vh -1vh 1vh $bgColor,
-                    -1vh 1vh 1vh $bgColor,
-                     1vh 1vh 1vh $bgColor,
-                    -1vh -1vh 1vh $bgColor;
+            -1vh 1vh 1vh $bgColor,
+            1vh 1vh 1vh $bgColor,
+            -1vh -1vh 1vh $bgColor;
         animation: mainLogo 3s linear infinite;
         z-index: 2;
     }
 }
+
 nav.img-nav {
     display: flex;
     position: relative;
@@ -33,38 +58,47 @@ nav.img-nav {
     justify-content: center;
     align-items: center;
     font-size: 64px;
+
     img.main-slide {
         width: 100%;
         height: 100vh;
     }
 }
+
 .fa-angle-left {
     position: absolute;
     left: 1vh;
     animation: leftAngle 1s linear infinite;
+
     &:hover {
         cursor: pointer;
         animation: none;
         transform: scale(1.2);
     }
 }
+
 .fa-angle-right {
     position: absolute;
     right: 1vh;
     animation: rightAngle 1s linear infinite;
+
     &:hover {
         cursor: pointer;
         animation: none;
         transform: scale(1.2);
     }
 }
+
 .dots {
     position: absolute;
     bottom: .5vh;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    .first-dot, .second-dot, .third-dot {
+
+    .first-dot,
+    .second-dot,
+    .third-dot {
         transition: .4s;
         width: 2vh;
         height: 2vh;
@@ -72,52 +106,90 @@ nav.img-nav {
         margin: 1vh;
         border-radius: 50%;
         transition: .2s;
+
         &.active-dot {
             background-color: transparent;
             border: 2px solid $darkColor;
         }
+
         &:hover {
             cursor: pointer;
             background-color: $greyColor;
         }
-    }   
+    }
 }
+
 @keyframes mainLogo {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(15px); }
-    100% { transform: translateY(0); }
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
+
 @keyframes leftAngle {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(5px); }
-    100% { transform: translateX(0); }
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 @keyframes rightAngle {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(-5px); }
-    100% { transform: translateX(0); }
-}
-@media (min-width: 700px){
-    header.main-header {
-        h1 { font-size: 6rem; }
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
     }
 }
-@media (min-width: 1024px){
+
+@media (min-width: 700px) {
+    header.main-header {
+        h1 {
+            font-size: 6rem;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
     header.main-header {
         height: 100vh;
+
         &.slide-1 {
             background-image: url(../img/desktop/header1.WebP);
         }
+
         &.slide-2 {
             background-image: url(../img/desktop/header2.WebP);
         }
+
         &.slide-3 {
             background-image: url(../img/desktop/header3.WebP);
         }
+
         background-attachment: fixed;
+
         h1 {
             font-size: 8rem;
         }
     }
 }
+</style>

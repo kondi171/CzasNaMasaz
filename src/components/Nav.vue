@@ -1,3 +1,27 @@
+<script lang="ts">
+export default {
+    components: {}
+}
+</script>
+<template>
+    <nav class="main-nav">
+        <div class="hamburger-btn">
+            <div class="top-paddle"></div>
+            <div class="middle-paddle"></div>
+            <div class="bottom-paddle"></div>
+        </div>
+        <h1 id="scrollTop">Czas<span>Na</span>Masaż<span>.pl</span></h1>
+        <ul class="nav-list">
+            <li class="item-list articles-item">Artykuły</li>
+            <li class="item-list about-item">O mnie</li>
+            <li class="item-list offer-item">Oferta</li>
+            <li class="item-list contact-item">Kontakt</li>
+        </ul>
+    </nav>
+</template>
+<style lang="scss" scoped>
+@import './../assets/scss/variables';
+
 nav.main-nav {
     position: fixed;
     display: flex;
@@ -11,18 +35,28 @@ nav.main-nav {
     border-bottom: .2vh solid $primaryColor;
     box-shadow: 0 0 .8vh .2vh $primaryColor;
     transition: .3s;
+
     .nav-list {
         display: none;
         list-style: none;
-    } h1 {
+    }
+
+    h1 {
         font-size: 2rem;
         margin-left: 3vw;
         line-height: 6rem;
         color: lighten($greyColor, 10%);
-        span { color: $primaryColor; }
+
+        span {
+            color: $primaryColor;
+        }
     }
 }
-nav.modal-active { transform: translateY(-4rem); }
+
+nav.modal-active {
+    transform: translateY(-4rem);
+}
+
 ul.nav-list.dropdown {
     position: fixed;
     top: 3rem;
@@ -33,51 +67,67 @@ ul.nav-list.dropdown {
     justify-content: center;
     color: $bgColor;
     font-size: 1.5rem;
+
     li {
         padding: .7rem;
+
         &:first-of-type {
             margin-top: 1rem;
         }
     }
 }
+
 .curtain {
     &::before {
         content: '';
         position: fixed;
-        display:block;
-        top:0;
-        left:0;
+        display: block;
+        top: 0;
+        left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: rgba(0,0,0,.9);
+        background-color: rgba(0, 0, 0, .9);
         z-index: 5;
     }
- }
+}
+
 .hamburger-btn {
     position: absolute;
     right: 5vw;
     margin: auto 0;
-    .top-paddle, .middle-paddle, .bottom-paddle {
+
+    .top-paddle,
+    .middle-paddle,
+    .bottom-paddle {
         width: 2rem;
         height: .3rem;
         background-color: $greyColor;
         border-radius: 1rem;
     }
+
     .top-paddle {
         position: absolute;
         top: -.8rem;
         transition: .2s;
     }
+
     .bottom-paddle {
         position: absolute;
         bottom: -.8rem;
         transition: .2s;
     }
-    &:hover .top-paddle,&:hover .middle-paddle,&:hover .bottom-paddle {
+
+    &:hover .top-paddle,
+    &:hover .middle-paddle,
+    &:hover .bottom-paddle {
         cursor: pointer;
         background-color: $primaryColor;
     }
-    &:hover { cursor: pointer; }
+
+    &:hover {
+        cursor: pointer;
+    }
+
     &.active {
         .top-paddle {
             transform: rotate(45deg);
@@ -85,7 +135,11 @@ ul.nav-list.dropdown {
             height: .5rem;
             border: none;
         }
-        .middle-paddle { visibility: hidden; }
+
+        .middle-paddle {
+            visibility: hidden;
+        }
+
         .bottom-paddle {
             transform: rotate(-45deg);
             bottom: 0;
@@ -94,68 +148,95 @@ ul.nav-list.dropdown {
         }
     }
 }
-nav.img-nav { height: 100vh; }
+
+nav.img-nav {
+    height: 100vh;
+}
+
 @media (max-width: 300px) {
-    nav.modal-active { transform: translateY(-3rem); }
+    nav.modal-active {
+        transform: translateY(-3rem);
+    }
+
     nav.main-nav {
         height: 3rem;
+
         h1 {
             font-size: 1rem;
             line-height: 3rem;
-        } 
+        }
     }
+
     .hamburger-btn {
         font-size: 1rem;
         line-height: 3rem;
     }
 }
+
 @media (max-height: 300px) and (orientation: landscape) {
-    nav.modal-active { transform: translateY(-3rem); }
+    nav.modal-active {
+        transform: translateY(-3rem);
+    }
+
     nav.main-nav {
         min-height: 3rem;
     }
 }
 
 @media (min-width: 540px) and (orientation: landscape) {
-    nav.modal-active { transform: translateY(-12vh); }
+    nav.modal-active {
+        transform: translateY(-12vh);
+    }
+
     nav.main-nav {
         height: 12vh;
+
         h1 {
             font-size: 6vh;
             line-height: 12vh;
-        } 
+        }
     }
+
     .hamburger-btn {
         font-size: 6vh;
         line-height: 12vh;
     }
 }
+
 @media (min-width: 700px) {
     ul.nav-list.dropdown {
         li {
             padding: .7rem;
+
             &:first-of-type {
                 margin-top: 2rem;
             }
         }
     }
 }
+
 @media (min-width: 1024px) {
-    nav.modal-active { transform: translateY(-6rem); }
+    nav.modal-active {
+        transform: translateY(-6rem);
+    }
+
     nav.main-nav {
         display: flex;
         align-items: center;
         height: 6rem;
+
         ul.nav-list {
             display: flex;
             flex-basis: 70%;
             justify-content: flex-end;
             font-size: 2rem;
+
             .item-list {
                 margin: 0 1rem;
                 width: 80% / 4;
                 color: $greyColor;
                 transition: .3s;
+
                 &:hover {
                     cursor: pointer;
                     color: $primaryColor;
@@ -164,5 +245,8 @@ nav.img-nav { height: 100vh; }
             }
         }
     }
-    .hamburger-btn { display: none; }
-}
+
+    .hamburger-btn {
+        display: none;
+    }
+}</style>
